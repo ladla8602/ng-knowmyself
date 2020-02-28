@@ -111,7 +111,7 @@
             <ion-list>
                 <div *ngFor="let item of items">
                     <ion-item *ngIf="item.no_of_articles != '0'; else noArticleBlock" routerLink="/index/{{item.id}}" routerDirection="forward">
-                       
+                    
                             <ion-text style="font-weight: 700;">
                                 {{ item.category }}
                             </ion-text>

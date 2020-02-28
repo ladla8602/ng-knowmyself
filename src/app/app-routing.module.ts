@@ -16,6 +16,7 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'index/:cat_id', loadChildren: './list-infinte-scroll/list-infinte-scroll.module#ListInfinteScrollPageModule' },
+  { path: 'article/:index_id', loadChildren: './actionsheet-simple/actionsheet-simple.module#ActionsheetSimplePageModule' },
   { path: 'list-refresher', loadChildren: './list-refresher/list-refresher.module#ListRefresherPageModule' },
   { path: 'list-slide-left', loadChildren: './list-slide-left/list-slide-left.module#ListSlideLeftPageModule' },
   { path: 'list-slide-right', loadChildren: './list-slide-right/list-slide-right.module#ListSlideRightPageModule' },
@@ -103,7 +104,6 @@ const routes: Routes = [
   { path: 'toast-bottom', loadChildren: './toast-bottom/toast-bottom.module#ToastBottomPageModule' },
   { path: 'toast-middle', loadChildren: './toast-middle/toast-middle.module#ToastMiddlePageModule' },
   { path: 'toast-top', loadChildren: './toast-top/toast-top.module#ToastTopPageModule' },
-  { path: 'actionsheet-simple', loadChildren: './actionsheet-simple/actionsheet-simple.module#ActionsheetSimplePageModule' },
   { path: 'actionsheet-icon', loadChildren: './actionsheet-icon/actionsheet-icon.module#ActionsheetIconPageModule' },
   { path: 'parallax-header-image', loadChildren: './parallax-header-image/parallax-header-image.module#ParallaxHeaderImagePageModule' },
   { path: 'form-login-one', loadChildren: './form-login-one/form-login-one.module#FormLoginOnePageModule' },

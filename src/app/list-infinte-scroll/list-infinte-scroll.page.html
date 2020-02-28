@@ -12,27 +12,30 @@
  <ion-row no-padding>
     <ion-col no-padding>
       <ion-item style='--background:var(--my-var)' class="itemSlider">
-          <ion-searchbar (ionInput)="getItems($event)" placeholder="Search Article Category" animated></ion-searchbar>
+          <ion-searchbar (ionInput)="searchIndex($event)" placeholder="Search Article Category" animated></ion-searchbar>
       </ion-item>
     </ion-col>
   </ion-row>
 <ion-content no-padding>
   <!-- list with multiple iterations -->
   <ion-list>
-    <ion-item *ngFor="let item of products">
-      <ion-label>
-        <h3 style="font-weight: 600;">{{item.index}}</h3>
-        <p>{{item.desc}}</p>
+    <div *ngFor="let item of products">
+      <ion-item *ngIf="item.status == '1'; else noArticleBlock" routerLink="/article/{{item.id}}" routerDirection="forward">
+      <ion-label style="font-weight: 600;">
+        {{item.index}}
       </ion-label>
-      <ion-avatar slot="end" >
-          <p>Like</p>
-        <img src="{{item.image}}">
-      </ion-avatar>
+      <span slot="end" class="dot green"></span>
     </ion-item>
+    <ng-template #noArticleBlock>
+    <ion-item (click)="hasArticle()">
+        <ion-text style="font-weight: 600;">
+            {{ item.index }}
+        </ion-text>
+         <span slot="end" class="dot red"></span>
+    </ion-item>
+    </ng-template>
+    </div>
+    
   </ion-list>
-<!-- scroll down to get new items after loading -->
-  <ion-infinite-scroll threshold="10px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content loadingSpinner="lines">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+
 </ion-content>

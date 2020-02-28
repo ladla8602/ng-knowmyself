@@ -1,22 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';//actionsheet controller package
 
+import { ActivatedRoute } from '@angular/router';
+import { ArticleService } from '../article/article.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-actionsheet-simple',
   templateUrl: './actionsheet-simple.page.html',
   styleUrls: ['./actionsheet-simple.page.scss'],
 })
 export class ActionsheetSimplePage implements OnInit {
+  public index_id: string;
+  public articles: any = [];
+  public staticarticles: any = [];
+  public index: string;
 
-  items = [
-    { heading: "Article One", image: "assets/images/Pictures/gallery-images/gallery_image3.png", subheading: "Label Text", para: "Text buttons and contained buttons use text labels, which describe the action that will occur if a user taps a button. If a text label is not used, an icon should be present to signify what the button does. By default Material uses capitalizedbutton text labels (for languages that have capitalization). This is to distinguish the text label from surrounding text. If a text button does not use capitalization for button text, find another characteristic to distinguish it such as color,size, or placement." },
-    { heading: "Article Two", image: "assets/images/Pictures/gallery-images/gallery_image4.png", subheading: "Label Text", para: "Text buttons and contained buttons use text labels, which describe the action that will occur if a user taps a button. If a text label is not used, an icon should be present to signify what the button does. By default Material uses capitalizedbutton text labels (for languages that have capitalization). This is to distinguish the text label from surrounding text. If a text button does not use capitalization for button text, find another characteristic to distinguish it such as color,size, or placement." },
-    { heading: "Article Three", image: "assets/images/Pictures/gallery-images/gallery_image5.png", subheading: "Label Text", para: "Text buttons and contained buttons use text labels, which describe the action that will occur if a user taps a button. If a text label is not used, an icon should be present to signify what the button does. By default Material uses capitalizedbutton text labels (for languages that have capitalization). This is to distinguish the text label from surrounding text. If a text button does not use capitalization for button text, find another characteristic to distinguish it such as color,size, or placement." },
-  ];
   //action sheet package declaration
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(
+    private route: ActivatedRoute,
+    public actionSheetController: ActionSheetController,
+    private location: Location,
+    private articleService: ArticleService) { }
 
   ngOnInit() {
+    this.index_id = this.route.snapshot.paramMap.get('index_id');
+    this.initializeArticle(this.index_id);
+  }
+
+  initializeArticle(id){
+    this.articleService.getArticle(id).subscribe(res => {
+      if(res && res.length){
+        this.articles = res;
+        this.staticarticles = res;
+        this.index = res[0].index;   //assigning category name
+      }
+      
+    });
   }
   //action sheet controller function
   async presentActionSheet() {
@@ -52,5 +71,9 @@ export class ActionsheetSimplePage implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+  backToIndex(){
+    this.location.back();
   }
 }
