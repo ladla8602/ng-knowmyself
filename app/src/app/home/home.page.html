@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      2KnowMySelf - The Article Pocket App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <ion-row class="materialAppRow">
+      <ion-col no-padding class="materialAppThemeCol" size="12">
+        <ion-item style='--background:var(--my-var)'  class="segment" no-padding>
+          <ion-segment scrollable>
+            <ion-segment-button class="segmentTextBtn">
+              <ion-row>
+                <ion-col size="6">
+                  <p class="materialAppPara">
+                    <b>App Color </b>
+                  </p>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-icon class="forward-icon" name="arrow-round-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-segment-button>
+            <ion-segment-button class="lightOrangeSegmentBtn">
+              <ion-button *ngIf="!visiableBtnAutum" (click)="changeTheme('autumn')" class="lightOrangeBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnAutum" (click)="changeTheme('autumn')" class="lightOrangeBtn">
+                <ion-icon class="checkmark-icon" name="checkmark" size="large"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="darkBlueSegmentBtn">
+              <ion-button *ngIf="!visiableBtnNight" (click)="changeTheme('night')" class="darkBlueBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnNight" (click)="changeTheme('night')" class="darkBlueBtn">
+                <ion-icon class="checkmark-icon" name="checkmark" size="large"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="lightPurpleSegmentBtn">
+              <ion-button *ngIf="!visiableBtnNeon" (click)="changeTheme('neon')" class="lightPurpleBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnNeon" (click)="changeTheme('neon')" class="lightPurpleBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="darkPinkSegmentBtn">
+              <ion-button *ngIf="!visiableBtnOriginal" (click)="changeTheme('orginal')" class="darkPinkBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnOriginal" (click)="changeTheme('orginal')" class="darkPinkBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="redSegmentBtn">
+              <ion-button *ngIf="!visiableBtnRed" (click)="changeTheme('red')" class="redBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnRed" (click)="changeTheme('red')" class="redBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="purpleSegmentBtn">
+              <ion-button *ngIf="!visiableBtnPurple" (click)="changeTheme('purple')" class="purpleBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnPurple" (click)="changeTheme('purple')" class="purpleBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="lightBlueSegmentBtn">
+              <ion-button *ngIf="!visiableBtnLightblue" (click)="changeTheme('Lightblue')" class="lightBlueBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnLightblue" (click)="changeTheme('Lightblue')" class="lightBlueBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="lightGreenSegmentBtn">
+              <ion-button *ngIf="!visiableBtnLightgreen" (click)="changeTheme('Lightgreen')" class="lightGreenBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnLightgreen" (click)="changeTheme('Lightgreen')" class="lightGreenBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="lightGray1SegmentBtn">
+              <ion-button *ngIf="!visiableBtnLightgray" (click)="changeTheme('Lightgray')" class="lightGray1"></ion-button>
+              <ion-button *ngIf="visiableBtnLightgray" (click)="changeTheme('Lightgray')" class="lightGray1">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+            <ion-segment-button class="blueSegmentBtn">
+              <ion-button *ngIf="!visiableBtnBlue" (click)="changeTheme('blue')" class="blueBtn"></ion-button>
+              <ion-button *ngIf="visiableBtnBlue" (click)="changeTheme('blue')" class="blueBtn">
+                <ion-icon class="checkmark-icon" name="checkmark"></ion-icon>
+              </ion-button>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!--search box -->
+    <ion-row no-padding>
+      <ion-col no-padding>
+        <ion-item style='--background:var(--my-var)' class="itemSlider">
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="Search Article Category" animated></ion-searchbar>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row padding>
+        <ion-col no-padding size="12">
+            <ion-header translucent>
+                <ion-toolbar>
+                  <ion-title>Article Directory</ion-title>
+                </ion-toolbar>
+              </ion-header>
+            <ion-list>
+                <div *ngFor="let item of items">
+                    <ion-item *ngIf="item.no_of_articles != '0'; else noArticleBlock" routerLink="/index/{{item.id}}" routerDirection="forward">
+                       
+                            <ion-text style="font-weight: 700;">
+                                {{ item.category }}
+                            </ion-text>
+                            <ion-badge slot="end">{{item.no_of_articles}}</ion-badge>
+                    
+                    </ion-item>
+                    <ng-template #noArticleBlock>
+                    <ion-item (click)="hasArticle()">
+                        <ion-text style="font-weight: 700;">
+                            {{ item.category }}
+                        </ion-text>
+                            
+                        <ion-badge slot="end">{{item.no_of_articles}}</ion-badge>
+                    </ion-item>
+                    </ng-template>
+                        
+                </div>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

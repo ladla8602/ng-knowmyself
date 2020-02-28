@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button expand="block" routerLink="/home" routerDirection="backward">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{category}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+ <!--search box -->
+ <ion-row no-padding>
+    <ion-col no-padding>
+      <ion-item style='--background:var(--my-var)' class="itemSlider">
+          <ion-searchbar (ionInput)="getItems($event)" placeholder="Search Article Category" animated></ion-searchbar>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+<ion-content no-padding>
+  <!-- list with multiple iterations -->
+  <ion-list>
+    <ion-item *ngFor="let item of products">
+      <ion-label>
+        <h3 style="font-weight: 600;">{{item.index}}</h3>
+        <p>{{item.desc}}</p>
+      </ion-label>
+      <ion-avatar slot="end" >
+          <p>Like</p>
+        <img src="{{item.image}}">
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+<!-- scroll down to get new items after loading -->
+  <ion-infinite-scroll threshold="10px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="lines">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
