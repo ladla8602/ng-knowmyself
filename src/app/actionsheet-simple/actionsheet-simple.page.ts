@@ -3,7 +3,11 @@ import { ActionSheetController } from '@ionic/angular';//actionsheet controller 
 
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from '../article/article.service';
+import { FavoriteProvider } from '../providers/bookmark_index';
+
+import { ToastController } from '@ionic/angular';
 import { Location } from '@angular/common';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-actionsheet-simple',
   templateUrl: './actionsheet-simple.page.html',
@@ -14,16 +18,26 @@ export class ActionsheetSimplePage implements OnInit {
   public articles: any = [];
   public staticarticles: any = [];
   public index: string;
+  public isFavorite = false;
 
   //action sheet package declaration
   constructor(
     private route: ActivatedRoute,
     public actionSheetController: ActionSheetController,
     private location: Location,
-    private articleService: ArticleService) { }
+    private articleService: ArticleService,
+    private storage: Storage,
+    public favoriteProvider: FavoriteProvider,
+    public toast: ToastController
+    ) { 
+    
+    this.index_id = this.route.snapshot.paramMap.get('index_id');
+    this.favoriteProvider.isFavorite(this.index_id).then(isFav => {
+      this.isFavorite = isFav;
+    })
+  }
 
   ngOnInit() {
-    this.index_id = this.route.snapshot.paramMap.get('index_id');
     this.initializeArticle(this.index_id);
   }
 
@@ -32,45 +46,42 @@ export class ActionsheetSimplePage implements OnInit {
       if(res && res.length){
         this.articles = res;
         this.staticarticles = res;
-        this.index = res[0].index;   //assigning category name
+        this.index = res[0].index;   //assigning article name
       }
       
     });
   }
-  //action sheet controller function
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Albums',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        handler: () => {
-          console.log('Delete clicked');
-        }
-      }, {
-        text: 'Share',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
-        text: 'Play (open modal)',
-        handler: () => {
-          console.log('Play clicked');
-        }
-      }, {
-        text: 'Favorite',
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      }, {
-        text: 'Cancel',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
-      }]
+
+  async favoriteArticle() {
+    this.favoriteProvider.favoriteFilm(this.index_id).then(() => {
+      this.isFavorite = true;
     });
-    await actionSheet.present();
+    const toast = await this.toast.create({
+            cssClass: 'toastTag',
+            color: "success",
+            showCloseButton: true,
+            position: 'bottom',
+            message: "Article Bookmarked Successfully.",
+            closeButtonText: '| Ok',
+            duration: 2000
+        });
+        toast.present();
+  }
+ 
+  async unfavoriteArticle() {
+    this.favoriteProvider.unfavoriteFilm(this.index_id).then(() => {
+      this.isFavorite = false;
+    });
+    const toast = await this.toast.create({
+            cssClass: 'toastTag',
+            color: "danger",
+            showCloseButton: true,
+            position: 'bottom',
+            message: "Article removed from Bookmark.",
+            closeButtonText: '| Ok',
+            duration: 2000
+        });
+        toast.present();
   }
 
   backToIndex(){

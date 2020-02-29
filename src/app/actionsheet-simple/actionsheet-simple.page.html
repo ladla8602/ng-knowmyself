@@ -6,6 +6,16 @@
       </ion-button>
     </ion-buttons>
     <ion-title>{{index}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button expand="block" (click)="unfavoriteArticle()" *ngIf="isFavorite">
+        <ion-icon name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button expand="block" (click)="favoriteArticle()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

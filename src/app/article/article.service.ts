@@ -6,6 +6,7 @@ import { retry, catchError } from 'rxjs/operators';
 import { Category } from './category';
 import { Index } from './index';
 import { Article } from './article';
+import { LatestArticle } from './latestarticle';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,7 @@ export class ArticleService {
 
   // baseUrl = 'http://192.168.10.22/knowmyself/api/v1';
   baseUrl = 'http://192.168.1.208/knowmyself/api/v1';
+  // baseUrl = 'http://192.168.43.123/knowmyself/api/v1';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -38,6 +40,14 @@ export class ArticleService {
   }
   getArticle(index_id:any): Observable<Article> {
     return this.http.get<Article>(this.baseUrl + '/get_article/' + index_id)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+  getLatestArticle(): Observable<LatestArticle> {
+    return this.http.get<LatestArticle>(this.baseUrl + '/latest_article/')
     .pipe(
       retry(1),
       catchError(this.errorHandl)

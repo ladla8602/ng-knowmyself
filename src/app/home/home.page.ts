@@ -143,12 +143,14 @@ export class HomePage implements OnInit{
 
 ngOnInit(){
     this.initializeItems();
+    this.menuCtrl.close();
 }
 
   ionViewWillEnter() {
     this.menuCtrl.enable(false, 'Menu2')
     this.menuCtrl.enable(true, 'Menu1')
-    this.menuCtrl.open('Menu1');
+    this.menuCtrl.swipeEnable(true, 'Menu1')
+    // this.menuCtrl.open('Menu1');
     this.theme.getTheme().then((result) => {
       let val = result;
       if (val == undefined) {

@@ -4,6 +4,7 @@ import { Platform, Events, NavController, ModalController, MenuController } from
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { ArticleService } from './article/article.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,91 +12,23 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   itemColor: any;
+  public articlesCount: number = 0;
   public iconColorVar = "";
   // For Menu 1
   public appPages = [
-    //  {
-    //    title: 'HOME',
-    //    url: '/home',
-    //    icon: 'home'
-    //  },
     {
-      title: 'COMPONENTS',
+      title: 'MENU',
       url: '',
       icon: 'list'
-    },
-    // {
-    //   title: 'UI/UX Themes',
-    //   url: '/ui-ux-themes',
-    //   icon: 'list'
-    // }
-  ];
-
-  // For Menu 2
-  public appPages2 = [
-    {
-      title: 'Contact Us',
-      url: '/econtact-us',
-      icon: 'call'
-    },
-    {
-      title: 'About Us',
-      url: '/eabout-us',
-      icon: 'information-circle'
-    },
-    {
-      title: 'News',
-      url: '/enews',
-      icon: 'paper'
-    },
-    {
-      title: 'Intro',
-      url: '/eintro',
-      icon: 'logo-ionic'
-    },
-    {
-      title: 'Share',
-      url: '',
-      icon: 'share'
-    },
-    {
-      title: 'Settings',
-      url: '/esettings',
-      icon: 'settings'
-    },
-    {
-      title: 'Exit',
-      url: '/home',
-      icon: 'exit'
     }
   ];
 
-  // For Expandable Menu 2
-
   //home list
-  public homeList = [
-    { text: "Home - 1" },
-    { text: "Home - 2" },
-    { text: "Home - 3" },
-    { text: "Home - 4" },
-    { text: "Home - 5" },
-  ];
+  public homeList = [];
   //category list
-  public categoryList = [
-    { text: "Category - 1" },
-    { text: "Category - 2" },
-    { text: "Category - 3" },
-    { text: "Category - 4" },
-    { text: "Category - 5" },
-    { text: "Category - 6" },
-  ];
+  public categoryList = [];
   //Shop list
-  public shopList = [
-    { text: "Newset" },
-    { text: "Top Seller" },
-    { text: "Deals" },
-    { text: "Most Liked" },
-  ];
+  public shopList = [];
   visibleBtn = false;
   visibleList = false;
   visibleGrid = false;
@@ -139,20 +72,7 @@ export class AppComponent {
   public itemsActionsheet: any = [];
   public itemsForm: any = [];
   ///////
-  public listView = [
-    { name: "Infinite Scroll" },
-    { name: "Refresher" },
-    { name: "Slide To Left Animation" },
-    { name: "Slide To Right Animation" },
-    { name: "Fade In Animation" },
-    { name: "Thumbnail With Products" },
-    { name: "Full Image Left To Right" },
-    { name: "Items With Header" },
-    { name: "Swipe Avatar Left To Right" },
-    { name: "Swipe Avatar Right To Left" },
-    { name: "Reorder List" },
-    { name: "Expandable List" },
-  ];
+  public listView = [];
   /////////
   public grid = [
     { name: "Two line" },
@@ -568,7 +488,8 @@ export class AppComponent {
     private navCtrl: NavController,
     private events: Events,
     public statusbar: StatusBar,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private articleService: ArticleService
   ) {
     //for status bar
     this.initializeApp();
@@ -681,43 +602,9 @@ export class AppComponent {
   }
 
   ////////
-  goToList(i) {
-    if (i == 0) {
-      this.navCtrl.navigateForward("list-infinte-scroll");
-    }
-    if (i == 1) {
-      this.navCtrl.navigateForward("list-refresher");
-    }
-    if (i == 2) {
-      this.navCtrl.navigateForward("list-slide-left");
-    }
-    if (i == 3) {
-      this.navCtrl.navigateForward("list-slide-rigth");
-    }
-    if (i == 4) {
-      this.navCtrl.navigateForward("list-fade-in");
-    }
-    if (i == 5) {
-      this.navCtrl.navigateForward("list-swipe-thumbnail-products");
-    }
-    if (i == 6) {
-      this.navCtrl.navigateForward("list-swipe-full-image");
-    }
-    if (i == 7) {
-      this.navCtrl.navigateForward("list-swipe-with-header");
-    }
-    if (i == 8) {
-      this.navCtrl.navigateForward("list-swipe-left-to-right");
-    }
-    if (i == 9) {
-      this.navCtrl.navigateForward("list-swipe-right-to-left");
-    }
-    if (i == 10) {
-      this.navCtrl.navigateForward("list-reorder");
-    }
-    if (i == 11) {
-      this.navCtrl.navigateForward("list-expandable");
-    }
+  goToList() {
+    this.menuCtrl.close();
+     this.navCtrl.navigateForward("latest");
   }
   /////
   ////////////
@@ -1016,11 +903,19 @@ export class AppComponent {
 
   /////
   ngOnInit() {
-    this.menuCtrl.enable(true, 'Menu1')
+    this.menuCtrl.enable(true, 'Menu1');
+    this.initializeLatestArticle();
   }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.hide();
+    });
+  }
+  initializeLatestArticle(){
+    this.articleService.getLatestArticle().subscribe(res => {
+      if(res && res.length){
+        this.articlesCount = res.length;   //assigning category name
+      }
     });
   }
 
