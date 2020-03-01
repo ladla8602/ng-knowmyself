@@ -3,7 +3,7 @@ import { ElementRef } from '@angular/core';
 import { Platform, Events, NavController, ModalController, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { Storage } from '@ionic/storage';
 import { ArticleService } from './article/article.service';
 @Component({
   selector: 'app-root',
@@ -12,6 +12,7 @@ import { ArticleService } from './article/article.service';
 })
 export class AppComponent {
   itemColor: any;
+  public bookmarkCount: number = 0;
   public articlesCount: number = 0;
   public iconColorVar = "";
   // For Menu 1
@@ -74,16 +75,7 @@ export class AppComponent {
   ///////
   public listView = [];
   /////////
-  public grid = [
-    { name: "Two line" },
-    { name: "Three line" },
-    { name: "Category" },
-    { name: "Grid sub category one" },
-    { name: "Grid sub category two" },
-    { name: "Album" },
-    { name: "Section" },
-    { name: "Products" },
-  ];
+  public grid = [];
   ////////
   goToGrid(i) {
     if (i == 0) {
@@ -489,7 +481,8 @@ export class AppComponent {
     private events: Events,
     public statusbar: StatusBar,
     private elementRef: ElementRef,
-    private articleService: ArticleService
+    private articleService: ArticleService,
+    private storage: Storage
   ) {
     //for status bar
     this.initializeApp();
@@ -905,6 +898,11 @@ export class AppComponent {
   ngOnInit() {
     this.menuCtrl.enable(true, 'Menu1');
     this.initializeLatestArticle();
+    this.storage.get('bookmarkArticles').then(result => {
+      if(result){
+        this.bookmarkCount = result.length;
+      }
+    });
   }
   initializeApp() {
     this.platform.ready().then(() => {

@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { FavoriteProvider } from './providers/bookmark_index';
+import { RecentProvider } from './providers/recent_index';
 import { MenuComponentComponent } from'./components/menu-component/menu-component.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +32,7 @@ import { ArticleService } from './article/article.service';
     SplashScreen,
     ArticleService,
     FavoriteProvider,
+    RecentProvider,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

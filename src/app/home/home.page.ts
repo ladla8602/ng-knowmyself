@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { MenuController, ModalController, NavController, Events } from '@ionic/angular';
 import { ThemeService } from '../services/theme.service';
 import { ViewChild } from '@angular/core';
@@ -126,7 +126,7 @@ export class HomePage implements OnInit{
   public itemColor = "";
   public items:any = [];
   public staticitems:any = [];
- 
+  public bookmarkCount: number = 0;
   constructor(
     private articleService: ArticleService,
     private service: CustomThemeService,

@@ -4,6 +4,7 @@ import { ActionSheetController } from '@ionic/angular';//actionsheet controller 
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from '../article/article.service';
 import { FavoriteProvider } from '../providers/bookmark_index';
+import { RecentProvider } from '../providers/recent_index';
 
 import { ToastController } from '@ionic/angular';
 import { Location } from '@angular/common';
@@ -28,6 +29,7 @@ export class ActionsheetSimplePage implements OnInit {
     private articleService: ArticleService,
     private storage: Storage,
     public favoriteProvider: FavoriteProvider,
+    public recentProvider: RecentProvider,
     public toast: ToastController
     ) { 
     
@@ -47,6 +49,8 @@ export class ActionsheetSimplePage implements OnInit {
         this.articles = res;
         this.staticarticles = res;
         this.index = res[0].index;   //assigning article name
+        //storing recently views articles index id
+        this.recentProvider.favoriteFilm(this.index_id);
       }
       
     });
