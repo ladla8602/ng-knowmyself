@@ -19,8 +19,91 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="articles">
   <ion-grid *ngFor="let item of articles">
     <div [innerHtml]="item.article"></div>
   </ion-grid>
+</ion-content>
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <ion-row>
+            <ion-col style="text-align: center;">
+              <button ion-button icon-only (click)="share()" color="primary" clear>
+            <ion-icon class="share-icon" name="share"></ion-icon>
+            </button>
+            </ion-col>
+            <ion-col style="text-align: center;">
+                <button ion-button icon-only (click)="shareViaEmail()" color="primary" clear>
+              <ion-icon class="share-icon" name="mail"></ion-icon>
+            </button>
+              </ion-col>
+            <ion-col style="text-align: center;">
+                <button ion-button icon-only (click)="shareViaTwitter()" color="primary" clear>
+                    <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+                  </button>
+            </ion-col>
+            <ion-col style="text-align: center;">
+              <button ion-button icon-only (click)="shareViaFacebook()" color="primary" clear>
+            <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>
+             </button>
+            </ion-col>
+            <ion-col style="text-align: center;">
+                <button ion-button icon-only (click)="shareViaWhatsapp()" color="primary" clear>
+                    <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+                </button>
+            </ion-col>
+          </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+<ion-content no-padding *ngIf="articles.length == 0">
+    <ion-card>
+        <ion-item>
+        <ion-label>
+            <h3><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></h3>
+            <p><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></p>
+        </ion-label>
+    </ion-item>
+    <ion-card-content>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    </ion-card-content>
+    <ion-row>
+        <ion-col padding>
+            <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+        </ion-col>
+        
+    </ion-row>
+    </ion-card>
 </ion-content>

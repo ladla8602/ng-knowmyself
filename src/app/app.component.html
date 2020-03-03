@@ -30,7 +30,7 @@
             </ion-item>
           </ion-menu-toggle>
           <div *ngIf="articlesCount != '0'; else noArticleBlock">
-            <ion-item no-padding lines="full" (click)="expandItemList(item)" class="listItem" *ngFor="let item of itemsList" (click)="goToList()">
+            <ion-item no-padding lines="full" class="listItem" *ngFor="let item of itemsList" (click)="goToList()">
             <ion-grid no-padding class="listGrid">
               <ion-row>
                 <ion-col size="2">
@@ -71,7 +71,7 @@
             </ion-grid>
           </ion-item>
           </ng-template>
-           <ion-item lines="full" (click)="expandItemBadge(item)" class="listItem" *ngFor="let item of itemsBadge" no-padding>
+           <ion-item lines="full" class="listItem" *ngFor="let item of itemsBadge" no-padding>
             <ion-grid class="listGrid" no-padding>
               <ion-row>
                 <ion-col size="2">
@@ -83,14 +83,12 @@
                   </p>
                 </ion-col>
                 <ion-col size="2">
-                  <div class="div-badge">
-                    <ion-badge class="buttonList">{{bookmarkCount}}</ion-badge>
-                  </div>
+               <small>Coming soon</small>
                 </ion-col>
               </ion-row>
             </ion-grid>
           </ion-item>
-          <ion-item lines="full" (click)="expandItemCard(item)" class="listItem" *ngFor="let item of itemsCard" no-padding>
+          <ion-item lines="full" class="listItem" *ngFor="let item of itemsCard" no-padding>
             <ion-grid class="listGrid" no-padding>
               <ion-row>
                 <ion-col size="2">
@@ -103,15 +101,13 @@
                 </ion-col>
 
                 <ion-col size="2">
-                  <div class="div-badge">
-                    <ion-badge class="buttonList">9</ion-badge>
-                  </div>
+                    <small>Coming soon</small>
                 </ion-col>
               </ion-row>
             </ion-grid>
           </ion-item>
 
-          <ion-item lines="full" class="listItem" (click)="expandItemGrid(item)" *ngFor="let item of itemsGrid" no-padding>
+          <ion-item lines="full" class="listItem" (click)="share()" *ngFor="let item of itemsGrid" no-padding>
             <ion-grid class="listGrid" no-padding>
               <ion-row>
                 <ion-col size="2">
@@ -130,7 +126,7 @@
             </ion-grid>
           </ion-item>
 
-          <ion-item (click)="expandItemTab(item)" lines="full" class="listItem" *ngFor="let item of itemsTab" no-padding>
+          <ion-item lines="full" class="listItem" *ngFor="let item of itemsTab" no-padding>
             <ion-grid class="listGrid" no-padding>
               <ion-row>
                 <ion-col size="2">

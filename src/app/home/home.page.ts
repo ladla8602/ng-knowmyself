@@ -7,6 +7,7 @@ import { ElementRef } from '@angular/core';
 import { ToastController } from '@ionic/angular';//toast controller package
 import { ArticleService } from '../article/article.service';
 
+
 const themes = {
   //red color o.k
   autumn: {

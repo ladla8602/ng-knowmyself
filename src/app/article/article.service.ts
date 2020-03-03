@@ -13,7 +13,7 @@ import { LatestArticle } from './latestarticle';
 export class ArticleService {
 
   // baseUrl = 'http://192.168.10.22/knowmyself/api/v1';
-  baseUrl = 'http://192.168.1.208/knowmyself/api/v1';
+  baseUrl = 'http://13.235.138.126/api/v1';
   // baseUrl = 'http://192.168.43.123/knowmyself/api/v1';
   constructor(private http: HttpClient) { }
 
@@ -47,7 +47,7 @@ export class ArticleService {
   }
 
   getLatestArticle(): Observable<LatestArticle> {
-    return this.http.get<LatestArticle>(this.baseUrl + '/latest_article/')
+    return this.http.get<LatestArticle>(this.baseUrl + '/latest_article')
     .pipe(
       retry(1),
       catchError(this.errorHandl)

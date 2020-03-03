@@ -16,6 +16,8 @@ import { MenuComponentComponent } from'./components/menu-component/menu-componen
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticleService } from './article/article.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 @NgModule({
   declarations: [AppComponent, MenuComponentComponent],
   entryComponents: [],
@@ -33,7 +35,8 @@ import { ArticleService } from './article/article.service';
     ArticleService,
     FavoriteProvider,
     RecentProvider,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    SocialSharing
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';//actionsheet controller package
-
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from '../article/article.service';
 import { FavoriteProvider } from '../providers/bookmark_index';
@@ -9,6 +9,7 @@ import { RecentProvider } from '../providers/recent_index';
 import { ToastController } from '@ionic/angular';
 import { Location } from '@angular/common';
 import { Storage } from '@ionic/storage';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-actionsheet-simple',
   templateUrl: './actionsheet-simple.page.html',
@@ -20,9 +21,11 @@ export class ActionsheetSimplePage implements OnInit {
   public staticarticles: any = [];
   public index: string;
   public isFavorite = false;
+  public msg: any;
 
   //action sheet package declaration
   constructor(
+    public platform: Platform,
     private route: ActivatedRoute,
     public actionSheetController: ActionSheetController,
     private location: Location,
@@ -30,7 +33,8 @@ export class ActionsheetSimplePage implements OnInit {
     private storage: Storage,
     public favoriteProvider: FavoriteProvider,
     public recentProvider: RecentProvider,
-    public toast: ToastController
+    public toast: ToastController,
+    private socialSharing: SocialSharing
     ) { 
     
     this.index_id = this.route.snapshot.paramMap.get('index_id');
@@ -41,6 +45,7 @@ export class ActionsheetSimplePage implements OnInit {
 
   ngOnInit() {
     this.initializeArticle(this.index_id);
+    this.compilemsg();
   }
 
   initializeArticle(id){
@@ -87,7 +92,61 @@ export class ActionsheetSimplePage implements OnInit {
         });
         toast.present();
   }
-
+  compilemsg():string{
+    var msg = this.index + "\n" + this.articles.article ;
+    return msg.concat(" \n Sent from 2KnowMySelf App! - https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself");
+  }
+    // Share Options
+    share() {
+        this.platform.ready().then(async () => {
+          await this.socialSharing.share('2KnowMySelf Psychology - The Article Pocket Book - Download at https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself').then(() => {
+          }).catch((err) => {
+            console.log(err)
+          });
+        });
+      }
+    
+      // Share Via Email
+      shareViaEmail() {
+        this.socialSharing.canShareViaEmail().then(() => {
+          this.platform.ready().then(() => {
+            this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
+          });
+        }).catch((err) => {
+          alert('Email not available')
+        })
+      }
+    
+      // Share Via WhatsApp
+      shareViaWhatsapp() {
+        this.socialSharing.shareViaWhatsApp(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
+          .then(() => {
+            console.log('It works');
+          }).catch(() => {
+            alert('WhatsApp not available')
+          });
+      }
+    
+      // Share Via Facebook
+      shareViaFacebook() {
+        this.socialSharing.shareViaFacebook(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
+          .then(() => {
+            console.log('It works');
+          }).catch(() => {
+            alert('Facebook not available')
+          });
+      }
+    
+      // Share Via Twitter
+      shareViaTwitter() {
+        this.socialSharing.shareViaTwitter('2KnowMySelf Psychology - The Article Pocket Book', null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
+          .then(() => {
+            console.log('It works');
+          }).catch(() => {
+            alert('Twitter not available');
+          });
+      }
+    
   backToIndex(){
     this.location.back();
   }
