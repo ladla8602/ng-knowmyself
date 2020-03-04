@@ -7,6 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-5260397651977005~2316005561",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.ladla8602.knowmyself"
     },
@@ -29,6 +33,13 @@
     }
   },
   "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
     "es6-promise-plugin": {
       "PACKAGE_NAME": "com.ladla8602.knowmyself"
     }

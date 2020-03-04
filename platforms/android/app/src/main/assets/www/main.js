@@ -932,7 +932,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content class=\"contaentClass\">\n        <ion-list class=\"listClass\">\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\n              <span>\n                <div class=\"logoDiv\">\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\n                </div>\n                <div class=\"textDiv\">\n                  <h3>Pyschology - Article Pocket App</h3>\n                </div>\n              </span>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item class=\"mainComponent\" lines=\"full\">\n              <div class=\"divPara\">\n                <p class=\"textParaComponents\">\n                  <b>{{p.title}}</b>\n                </p>\n              </div>\n            </ion-item>\n          </ion-menu-toggle>\n          <div *ngIf=\"articlesCount != 0; else noArticleBlock\">\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </div>\n          <ng-template #noArticleBlock>\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </ng-template>\n           <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    My Bookmarks\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n               <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Recently Viewed\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                    <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"share()\" *ngFor=\"let item of itemsGrid\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Share This App\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Rate\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Privacy Policy\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\r\n  <ion-split-pane>\r\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\r\n      <ion-header>\r\n        <ion-toolbar>\r\n          <ion-title>Menu</ion-title>\r\n        </ion-toolbar>\r\n      </ion-header>\r\n      <ion-content class=\"contaentClass\">\r\n        <ion-list class=\"listClass\">\r\n          <ion-menu-toggle auto-hide=\"false\">\r\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\r\n              <span>\r\n                <div class=\"logoDiv\">\r\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\r\n                </div>\r\n                <div class=\"textDiv\">\r\n                  <h3>Pyschology - Article Pocket App</h3>\r\n                </div>\r\n              </span>\r\n            </ion-item>\r\n          </ion-menu-toggle>\r\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\r\n            <ion-item class=\"mainComponent\" lines=\"full\">\r\n              <div class=\"divPara\">\r\n                <p class=\"textParaComponents\">\r\n                  <b>{{p.title}}</b>\r\n                </p>\r\n              </div>\r\n            </ion-item>\r\n          </ion-menu-toggle>\r\n          <div *ngIf=\"articlesCount != 0; else noArticleBlock\">\r\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\r\n            <ion-grid no-padding class=\"listGrid\">\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Latest Articles\r\n                  </p>\r\n                </ion-col>\r\n                <ion-col size=\"2\">\r\n                  <div class=\"div-badge\">\r\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\r\n                  </div>\r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n          </div>\r\n          <ng-template #noArticleBlock>\r\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\r\n            <ion-grid no-padding class=\"listGrid\">\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Latest Articles\r\n                  </p>\r\n                </ion-col>\r\n                <ion-col size=\"2\">\r\n                  <div class=\"div-badge\">\r\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\r\n                  </div>\r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n          </ng-template>\r\n           <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\r\n            <ion-grid class=\"listGrid\" no-padding>\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    My Bookmarks\r\n                  </p>\r\n                </ion-col>\r\n                <ion-col size=\"2\">\r\n               <small>Coming soon</small>\r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\r\n            <ion-grid class=\"listGrid\" no-padding>\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Recently Viewed\r\n                  </p>\r\n                </ion-col>\r\n\r\n                <ion-col size=\"2\">\r\n                    <small>Coming soon</small>\r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n\r\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"share()\" *ngFor=\"let item of itemsGrid\" no-padding>\r\n            <ion-grid class=\"listGrid\" no-padding>\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Share This App\r\n                  </p>\r\n                </ion-col>\r\n\r\n                <ion-col size=\"2\">\r\n                  \r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n\r\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\r\n            <ion-grid class=\"listGrid\" no-padding>\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Rate\r\n                  </p>\r\n                </ion-col>\r\n                <ion-col size=\"2\">\r\n                  \r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n\r\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\r\n            <ion-grid no-padding class=\"listGrid\">\r\n              <ion-row>\r\n                <ion-col size=\"2\">\r\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\r\n                </ion-col>\r\n                <ion-col size=\"8\" class=\"allColPos\">\r\n                  <p class=\"textPara\">\r\n                    Privacy Policy\r\n                  </p>\r\n                </ion-col>\r\n                <ion-col size=\"2\">\r\n                  \r\n                </ion-col>\r\n              </ion-row>\r\n            </ion-grid>\r\n          </ion-item>\r\n\r\n        </ion-list>\r\n      </ion-content>\r\n    </ion-menu>\r\n    <ion-router-outlet main></ion-router-outlet>\r\n  </ion-split-pane>\r\n</ion-app>"
 
 /***/ }),
 
@@ -1244,6 +1244,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
 /* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
+/* harmony import */ var _services_admobfree_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/admobfree.service */ "./src/app/services/admobfree.service.ts");
+
+
 
 
 
@@ -1281,7 +1285,9 @@ var AppModule = /** @class */ (function () {
                 _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_10__["FavoriteProvider"],
                 _providers_recent_index__WEBPACK_IMPORTED_MODULE_11__["RecentProvider"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"] },
-                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__["SocialSharing"]
+                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__["SocialSharing"],
+                _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_16__["AdMobFree"],
+                _services_admobfree_service__WEBPACK_IMPORTED_MODULE_17__["AdmobFreeService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
@@ -1375,7 +1381,7 @@ var ArticleService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div #expandWrapper class='expand-wrapper' [class.collapsed]=\"!expanded\">\n  <ng-content></ng-content>\n</div>\n"
+module.exports = "<div #expandWrapper class='expand-wrapper' [class.collapsed]=\"!expanded\">\r\n  <ng-content></ng-content>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1386,7 +1392,7 @@ module.exports = "<div #expandWrapper class='expand-wrapper' [class.collapsed]=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".expand-wrapper {\n  -webkit-transition: max-height 0.4s ease-in-out;\n  transition: max-height 0.4s ease-in-out;\n  overflow: hidden;\n  height: auto;\n  width: 235%;\n  background: lightgray; }\n\n.collapsed {\n  max-height: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvbmcta25vd215c2VsZi9hcHAvc3JjL2FwcC9jb21wb25lbnRzL21lbnUtY29tcG9uZW50L21lbnUtY29tcG9uZW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksK0NBQXVDO0VBQXZDLHVDQUF1QztFQUN2QyxnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7RUFDWCxxQkFBcUIsRUFBQTs7QUFHckI7RUFDRSx3QkFBd0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWVudS1jb21wb25lbnQvbWVudS1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLXdyYXBwZXIge1xyXG4gICAgdHJhbnNpdGlvbjogbWF4LWhlaWdodCAwLjRzIGVhc2UtaW4tb3V0O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIHdpZHRoOiAyMzUlO1xyXG4gICAgYmFja2dyb3VuZDogbGlnaHRncmF5O1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICAuY29sbGFwc2VkIHtcclxuICAgICAgbWF4LWhlaWdodDogMCAhaW1wb3J0YW50O1xyXG4gICAgfSJdfQ== */"
+module.exports = ".expand-wrapper {\n  -webkit-transition: max-height 0.4s ease-in-out;\n  transition: max-height 0.4s ease-in-out;\n  overflow: hidden;\n  height: auto;\n  width: 235%;\n  background: lightgray; }\n\n.collapsed {\n  max-height: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tZW51LWNvbXBvbmVudC9DOlxceGFtcHBcXGh0ZG9jc1xcbmcta25vd215c2VsZi9zcmNcXGFwcFxcY29tcG9uZW50c1xcbWVudS1jb21wb25lbnRcXG1lbnUtY29tcG9uZW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksK0NBQXVDO0VBQXZDLHVDQUF1QztFQUN2QyxnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7RUFDWCxxQkFBcUIsRUFBQTs7QUFHckI7RUFDRSx3QkFBd0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWVudS1jb21wb25lbnQvbWVudS1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLXdyYXBwZXIge1xyXG4gICAgdHJhbnNpdGlvbjogbWF4LWhlaWdodCAwLjRzIGVhc2UtaW4tb3V0O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIHdpZHRoOiAyMzUlO1xyXG4gICAgYmFja2dyb3VuZDogbGlnaHRncmF5O1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICAuY29sbGFwc2VkIHtcclxuICAgICAgbWF4LWhlaWdodDogMCAhaW1wb3J0YW50O1xyXG4gICAgfSJdfQ== */"
 
 /***/ }),
 
@@ -1564,6 +1570,119 @@ var RecentProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/admobfree.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/services/admobfree.service.ts ***!
+  \***********************************************/
+/*! exports provided: AdmobFreeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdmobFreeService", function() { return AdmobFreeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
+
+
+
+var AdmobFreeService = /** @class */ (function () {
+    function AdmobFreeService(admobFree, platform) {
+        var _this = this;
+        this.admobFree = admobFree;
+        this.platform = platform;
+        //Interstitial Ad's Configurations
+        this.interstitialConfig = {
+            // add your config here
+            // for the sake of this example we will just use the test config
+            isTesting: true,
+            autoShow: false,
+            id: "ca-app-pub-3940256099942544/6300978111"
+        };
+        //Reward Video Ad's Configurations
+        this.RewardVideoConfig = {
+            isTesting: true,
+            autoShow: false,
+            id: "ca-app-pub-3940256099942544/1033173712"
+        };
+        platform.ready().then(function () {
+            // Load ad configuration
+            _this.admobFree.interstitial.config(_this.interstitialConfig);
+            //Prepare Ad to Show
+            _this.admobFree.interstitial.prepare()
+                .then(function () {
+                // alert(1);
+            }).catch(function (e) { return alert(e); });
+            // Load ad configuration
+            _this.admobFree.rewardVideo.config(_this.RewardVideoConfig);
+            //Prepare Ad to Show
+            _this.admobFree.rewardVideo.prepare()
+                .then(function () {
+                // alert(2);
+            }).catch(function (e) { return alert(e); });
+        });
+        //Handle interstitial's close event to Prepare Ad again
+        this.admobFree.on('admob.interstitial.events.CLOSE').subscribe(function () {
+            _this.admobFree.interstitial.prepare()
+                .then(function () {
+                alert("Interstitial CLOSE");
+            }).catch(function (e) { return alert(e); });
+        });
+        //Handle Reward's close event to Prepare Ad again
+        this.admobFree.on('admob.rewardvideo.events.CLOSE').subscribe(function () {
+            _this.admobFree.rewardVideo.prepare()
+                .then(function () {
+                alert("Reward Video CLOSE");
+            }).catch(function (e) { return alert(e); });
+        });
+    }
+    AdmobFreeService.prototype.BannerAd = function () {
+        var bannerConfig = {
+            isTesting: true,
+            autoShow: true //,
+            //id: "ca-app-pub-39402XXXXXXX44/6300978111"
+        };
+        this.admobFree.banner.config(bannerConfig);
+        this.admobFree.banner.prepare().then(function () {
+            // success
+        }).catch(function (e) { return alert(e); });
+    };
+    AdmobFreeService.prototype.InterstitialAd = function () {
+        var _this = this;
+        //Check if Ad is loaded
+        this.admobFree.interstitial.isReady().then(function () {
+            //Will show prepared Ad
+            _this.admobFree.interstitial.show().then(function () {
+            })
+                .catch(function (e) { return alert("show " + e); });
+        })
+            .catch(function (e) { return alert("isReady " + e); });
+    };
+    AdmobFreeService.prototype.RewardVideoAd = function () {
+        var _this = this;
+        //Check if Ad is loaded
+        this.admobFree.rewardVideo.isReady().then(function () {
+            //Will show prepared Ad
+            _this.admobFree.rewardVideo.show().then(function () {
+            })
+                .catch(function (e) { return alert("show " + e); });
+        })
+            .catch(function (e) { return alert("isReady " + e); });
+    };
+    AdmobFreeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_2__["AdMobFree"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"]])
+    ], AdmobFreeService);
+    return AdmobFreeService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1625,7 +1744,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/ng-knowmyself/app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ng-knowmyself\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -6,7 +6,7 @@ import { CustomThemeService } from '../services/custom-theme.service';
 import { ElementRef } from '@angular/core';
 import { ToastController } from '@ionic/angular';//toast controller package
 import { ArticleService } from '../article/article.service';
-
+import { AdmobFreeService } from '../services/admobfree.service';
 
 const themes = {
   //red color o.k
@@ -129,6 +129,7 @@ export class HomePage implements OnInit{
   public staticitems:any = [];
   public bookmarkCount: number = 0;
   constructor(
+    private admobFreeService: AdmobFreeService,
     private articleService: ArticleService,
     private service: CustomThemeService,
     private events: Events, public menuCtrl: MenuController, private theme: ThemeService,
@@ -145,6 +146,7 @@ export class HomePage implements OnInit{
 ngOnInit(){
     this.initializeItems();
     this.menuCtrl.close();
+    this.admobFreeService.BannerAd();
 }
 
   ionViewWillEnter() {
