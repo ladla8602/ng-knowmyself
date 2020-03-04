@@ -2497,6 +2497,42 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/custom-theme.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/custom-theme.service.ts ***!
+  \**************************************************/
+/*! exports provided: CustomThemeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomThemeService", function() { return CustomThemeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var CustomThemeService = /** @class */ (function () {
+    function CustomThemeService() {
+    }
+    CustomThemeService.prototype.setTheme = function (c) {
+        this.color = c;
+    };
+    CustomThemeService.prototype.getTheme = function () {
+        return this.color;
+    };
+    CustomThemeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], CustomThemeService);
+    return CustomThemeService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/theme.service.ts":
 /*!*******************************************!*\
   !*** ./src/app/services/theme.service.ts ***!

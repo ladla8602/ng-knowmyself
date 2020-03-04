@@ -22,6 +22,7 @@ export class ActionsheetSimplePage implements OnInit {
   public index: string;
   public isFavorite = false;
   public msg: any;
+  public shareArticle: string;
 
   //action sheet package declaration
   constructor(
@@ -45,17 +46,19 @@ export class ActionsheetSimplePage implements OnInit {
 
   ngOnInit() {
     this.initializeArticle(this.index_id);
-    this.compilemsg();
   }
 
   initializeArticle(id){
     this.articleService.getArticle(id).subscribe(res => {
       if(res && res.length){
         this.articles = res;
+        this.shareArticle = res[0].article;
         this.staticarticles = res;
         this.index = res[0].index;   //assigning article name
         //storing recently views articles index id
         this.recentProvider.favoriteFilm(this.index_id);
+      }else{
+          this.articles = [];
       }
       
     });
@@ -92,8 +95,16 @@ export class ActionsheetSimplePage implements OnInit {
         });
         toast.present();
   }
+    stripHtml(html){
+        // Create a new div element
+        var temporalDivElement = document.createElement("div");
+        // Set the HTML content with the providen
+        temporalDivElement.innerHTML = html;
+        // Retrieve the text property of the element (cross-browser support)
+        return temporalDivElement.textContent || temporalDivElement.innerText || "";
+    }
   compilemsg():string{
-    var msg = this.index + "\n" + this.articles.article ;
+    var msg = this.index + "\n" + this.shareArticle ;
     return msg.concat(" \n Sent from 2KnowMySelf App! - https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself");
   }
     // Share Options
@@ -111,7 +122,7 @@ export class ActionsheetSimplePage implements OnInit {
         this.socialSharing.canShareViaEmail().then(() => {
           this.platform.ready().then(() => {
               this.msg = this.compilemsg();
-            this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
+            this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App \n' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
           });
         }).catch((err) => {
           alert('Email not available')
