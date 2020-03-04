@@ -58,7 +58,7 @@ var ActionsheetSimplePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button expand=\"block\" (click)=\"backToIndex()\">\n        <ion-icon name=\"arrow-back\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>{{index}}</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"unfavoriteArticle()\" *ngIf=\"isFavorite\">\n        <ion-icon name=\"star\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"favoriteArticle()\" *ngIf=\"!isFavorite\">\n        <ion-icon name=\"star-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding *ngIf=\"articles\">\n  <ion-grid *ngFor=\"let item of articles\">\n    <div [innerHtml]=\"item.article\"></div>\n  </ion-grid>\n  <ion-grid>\n    <!-- <ion-row>\n      <ion-col>\n        <button ion-button icon-only (click)=\"regularShare(i)\" color=\"primary\" clear>\n      <ion-icon class=\"share-icon\" name=\"share\"></ion-icon>\n    </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-only (click)=\"whatsappShare(i)\" color=\"primary\" clear>\n      <ion-icon class=\"share-icon\" name=\"logo-whatsapp\"></ion-icon>\n    </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-only (click)=\"facebookShare(i)\" color=\"primary\" clear>\n      <ion-icon  class=\"share-icon\" name=\"logo-facebook\"></ion-icon>\n    </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-only (click)=\"twitterShare(i)\" color=\"primary\" clear>\n      <ion-icon class=\"share-icon\" name=\"logo-twitter\"></ion-icon>\n    </button>\n      </ion-col>\n    </ion-row> -->\n    <ion-item lines=\"full\" (click)=\"share()\">Share</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaEmail()\">Share Via Email</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaWhatsapp()\">Share Via Whatsapp</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaFacebook()\">Share Via Facebook</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaTwitter()\">Share Via Twitter</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaInstagram()\">Share Via Instagram</ion-item>\n  <ion-item lines=\"full\" (click)=\"shareViaSMS()\">Share Via SMS</ion-item>\n  </ion-grid>\n</ion-content>\n<ion-content no-padding *ngIf=\"articles.length == 0\">\n    <ion-card>\n        <ion-item>\n        <ion-label>\n            <h3><ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text></h3>\n            <p><ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text></p>\n        </ion-label>\n    </ion-item>\n    <ion-card-content>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n    </ion-card-content>\n    <ion-row>\n        <ion-col padding>\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\n        </ion-col>\n        \n    </ion-row>\n    </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button expand=\"block\" (click)=\"backToIndex()\">\n        <ion-icon name=\"arrow-back\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>{{index}}</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"unfavoriteArticle()\" *ngIf=\"isFavorite\">\n        <ion-icon name=\"star\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"favoriteArticle()\" *ngIf=\"!isFavorite\">\n        <ion-icon name=\"star-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding *ngIf=\"articles\">\n  <ion-grid *ngFor=\"let item of articles\">\n    <div [innerHtml]=\"item.article\"></div>\n  </ion-grid>\n</ion-content>\n<!-- Footer without a border -->\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <ion-row>\n            <ion-col style=\"text-align: center;\">\n              <button ion-button icon-only (click)=\"share()\" color=\"primary\" clear>\n            <ion-icon class=\"share-icon\" name=\"share\"></ion-icon>\n            </button>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <button ion-button icon-only (click)=\"shareViaEmail()\" color=\"primary\" clear>\n              <ion-icon class=\"share-icon\" name=\"mail\"></ion-icon>\n            </button>\n              </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <button ion-button icon-only (click)=\"shareViaTwitter()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-twitter\"></ion-icon>\n                  </button>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n              <button ion-button icon-only (click)=\"shareViaFacebook()\" color=\"primary\" clear>\n            <ion-icon  class=\"share-icon\" name=\"logo-facebook\"></ion-icon>\n             </button>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <button ion-button icon-only (click)=\"shareViaWhatsapp()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-whatsapp\"></ion-icon>\n                </button>\n            </ion-col>\n          </ion-row>\n    </ion-toolbar>\n  </ion-footer>\n<ion-content no-padding *ngIf=\"articles.length == 0\">\n    <ion-card>\n        <ion-item>\n        <ion-label>\n            <h3><ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text></h3>\n            <p><ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text></p>\n        </ion-label>\n    </ion-item>\n    <ion-card-content>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n    </ion-card-content>\n    <ion-row>\n        <ion-col padding>\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\n        </ion-col>\n        \n    </ion-row>\n    </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -129,6 +129,7 @@ var ActionsheetSimplePage = /** @class */ (function () {
     }
     ActionsheetSimplePage.prototype.ngOnInit = function () {
         this.initializeArticle(this.index_id);
+        this.compilemsg();
     };
     ActionsheetSimplePage.prototype.initializeArticle = function (id) {
         var _this = this;
@@ -196,13 +197,17 @@ var ActionsheetSimplePage = /** @class */ (function () {
             });
         });
     };
+    ActionsheetSimplePage.prototype.compilemsg = function () {
+        var msg = this.index + "\n" + this.articles.article;
+        return msg.concat(" \n Sent from 2KnowMySelf App! - https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself");
+    };
     // Share Options
     ActionsheetSimplePage.prototype.share = function () {
         var _this = this;
         this.platform.ready().then(function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.socialSharing.share('I love Ionic').then(function () {
+                    case 0: return [4 /*yield*/, this.socialSharing.share('2KnowMySelf Psychology - The Article Pocket Book - Download at https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself').then(function () {
                         }).catch(function (err) {
                             console.log(err);
                         })];
@@ -218,7 +223,8 @@ var ActionsheetSimplePage = /** @class */ (function () {
         var _this = this;
         this.socialSharing.canShareViaEmail().then(function () {
             _this.platform.ready().then(function () {
-                _this.socialSharing.shareViaEmail('Body', 'Subject', ['recipient@example.org']);
+                _this.msg = _this.compilemsg();
+                _this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App' + _this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', []);
             });
         }).catch(function (err) {
             alert('Email not available');
@@ -226,7 +232,8 @@ var ActionsheetSimplePage = /** @class */ (function () {
     };
     // Share Via WhatsApp
     ActionsheetSimplePage.prototype.shareViaWhatsapp = function () {
-        this.socialSharing.shareViaWhatsApp('Hello WhatsApp', null, 'https://codevampires.com/')
+        this.msg = this.compilemsg();
+        this.socialSharing.shareViaWhatsApp(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
             .then(function () {
             console.log('It works');
         }).catch(function () {
@@ -235,7 +242,8 @@ var ActionsheetSimplePage = /** @class */ (function () {
     };
     // Share Via Facebook
     ActionsheetSimplePage.prototype.shareViaFacebook = function () {
-        this.socialSharing.shareViaFacebook('Hello Friends', null, 'https://codevampires.com/')
+        this.msg = this.compilemsg();
+        this.socialSharing.shareViaFacebook(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
             .then(function () {
             console.log('It works');
         }).catch(function () {
@@ -244,29 +252,12 @@ var ActionsheetSimplePage = /** @class */ (function () {
     };
     // Share Via Twitter
     ActionsheetSimplePage.prototype.shareViaTwitter = function () {
-        this.socialSharing.shareViaTwitter('Hello Twitter', null, 'https://codevampires.com/')
+        this.msg = this.compilemsg();
+        this.socialSharing.shareViaTwitter('2KnowMySelf Psychology - The Article Pocket Book', null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
             .then(function () {
             console.log('It works');
         }).catch(function () {
             alert('Twitter not available');
-        });
-    };
-    // Share Via Instagram
-    ActionsheetSimplePage.prototype.shareViaInstagram = function () {
-        this.socialSharing.shareViaInstagram('Hello Instagram', null)
-            .then(function () {
-            console.log('It works');
-        }).catch(function () {
-            alert('Instagram not available');
-        });
-    };
-    // Share via SMS
-    ActionsheetSimplePage.prototype.shareViaSMS = function () {
-        this.socialSharing.shareViaSMS('Hello', '+999 123123 123')
-            .then(function () {
-            console.log('It works');
-        }).catch(function () {
-            alert('Not available');
         });
     };
     ActionsheetSimplePage.prototype.backToIndex = function () {

@@ -110,6 +110,7 @@ export class ActionsheetSimplePage implements OnInit {
       shareViaEmail() {
         this.socialSharing.canShareViaEmail().then(() => {
           this.platform.ready().then(() => {
+              this.msg = this.compilemsg();
             this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
           });
         }).catch((err) => {
@@ -119,6 +120,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via WhatsApp
       shareViaWhatsapp() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaWhatsApp(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');
@@ -129,6 +131,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via Facebook
       shareViaFacebook() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaFacebook(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');
@@ -139,6 +142,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via Twitter
       shareViaTwitter() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaTwitter('2KnowMySelf Psychology - The Article Pocket Book', null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');

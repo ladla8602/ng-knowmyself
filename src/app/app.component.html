@@ -29,7 +29,7 @@
               </div>
             </ion-item>
           </ion-menu-toggle>
-          <div *ngIf="articlesCount != '0'; else noArticleBlock">
+          <div *ngIf="articlesCount != 0; else noArticleBlock">
             <ion-item no-padding lines="full" class="listItem" *ngFor="let item of itemsList" (click)="goToList()">
             <ion-grid no-padding class="listGrid">
               <ion-row>

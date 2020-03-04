@@ -17,9 +17,6 @@
       "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
       "PACKAGE_NAME": "com.ladla8602.knowmyself"
     },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.ladla8602.knowmyself"
-    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.ladla8602.knowmyself"
     },

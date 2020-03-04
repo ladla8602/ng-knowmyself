@@ -317,10 +317,10 @@ ngOnInit(){
         this.staticitems = res;
     });
     this.items = this.staticitems;
-}
-resetItems(){
-    this.items = this.staticitems;
-}
+    }
+    resetItems(){
+        this.items = this.staticitems;
+    }
 
     getItems(ev) {
         // Reset items back to all of the items

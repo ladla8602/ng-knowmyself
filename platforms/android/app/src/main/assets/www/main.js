@@ -1370,7 +1370,7 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        redirectTo: 'intro',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
     {
@@ -1517,7 +1517,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content class=\"contaentClass\">\n        <ion-list class=\"listClass\">\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\n              <span>\n                <div class=\"logoDiv\">\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\n                </div>\n                <div class=\"textDiv\">\n                  <h3>Pyschology - Article Pocket App</h3>\n                </div>\n              </span>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item class=\"mainComponent\" lines=\"full\">\n              <div class=\"divPara\">\n                <p class=\"textParaComponents\">\n                  <b>{{p.title}}</b>\n                </p>\n              </div>\n            </ion-item>\n          </ion-menu-toggle>\n          <div *ngIf=\"articlesCount != '0'; else noArticleBlock\">\n            <ion-item no-padding lines=\"full\" (click)=\"expandItemList(item)\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </div>\n          <ng-template #noArticleBlock>\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </ng-template>\n           <ion-item lines=\"full\" (click)=\"expandItemBadge(item)\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    My Bookmarks\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge class=\"buttonList\">{{bookmarkCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          <ion-item lines=\"full\" (click)=\"expandItemCard(item)\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Recently Viewed\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge class=\"buttonList\">9</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"expandItemGrid(item)\" *ngFor=\"let item of itemsGrid\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Share This App\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item (click)=\"expandItemTab(item)\" lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Rate\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Privacy Policy\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content class=\"contaentClass\">\n        <ion-list class=\"listClass\">\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\n              <span>\n                <div class=\"logoDiv\">\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\n                </div>\n                <div class=\"textDiv\">\n                  <h3>Pyschology - Article Pocket App</h3>\n                </div>\n              </span>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item class=\"mainComponent\" lines=\"full\">\n              <div class=\"divPara\">\n                <p class=\"textParaComponents\">\n                  <b>{{p.title}}</b>\n                </p>\n              </div>\n            </ion-item>\n          </ion-menu-toggle>\n          <div *ngIf=\"articlesCount != 0; else noArticleBlock\">\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </div>\n          <ng-template #noArticleBlock>\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </ng-template>\n           <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    My Bookmarks\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n               <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Recently Viewed\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                    <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"share()\" *ngFor=\"let item of itemsGrid\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Share This App\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Rate\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Privacy Policy\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -1532,9 +1532,9 @@ module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" me
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
 /* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
@@ -1548,10 +1548,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     // constructor
-    function AppComponent(platform, splashScreen, statusBar, menuCtrl, modalCntrl, nav, navCtrl, events, statusbar, elementRef, articleService, storage) {
+    function AppComponent(platform, statusBar, menuCtrl, modalCntrl, nav, navCtrl, events, statusbar, elementRef, articleService, storage, socialSharing) {
         var _this = this;
         this.platform = platform;
-        this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.menuCtrl = menuCtrl;
         this.modalCntrl = modalCntrl;
@@ -1562,6 +1561,7 @@ var AppComponent = /** @class */ (function () {
         this.elementRef = elementRef;
         this.articleService = articleService;
         this.storage = storage;
+        this.socialSharing = socialSharing;
         this.bookmarkCount = 0;
         this.articlesCount = 0;
         this.iconColorVar = "";
@@ -1623,133 +1623,6 @@ var AppComponent = /** @class */ (function () {
         this.itemsForm = [];
         ///////
         this.listView = [];
-        /////////
-        this.grid = [];
-        //////
-        this.card = [
-            { name: "Dashboard" },
-            { name: "Simple List" },
-            { name: "Avatar List" },
-            { name: "Shopping Cart" },
-            { name: "Shopping Cart Slider" },
-            { name: "Timeline Theme 1" },
-            { name: "Timeline Theme 2" },
-            { name: "Timeline Theme 3" },
-            { name: "Images" },
-        ];
-        ///////////
-        this.slider = [
-            { name: "Simple Slider" },
-            { name: "Images Slider" },
-            { name: "Autoplay Slider" },
-            { name: "Arrows Slider" },
-        ];
-        ////////
-        this.tabs = [
-            { name: "Footer Text" },
-            { name: "Footer Icons" },
-            { name: "Footer Text Icons" },
-            { name: "Footer Text Icons Badges" },
-            { name: "Header Text" },
-            { name: "Header Icons" },
-            { name: "Header Text Icons" },
-            { name: "Header Text Icons Badges" },
-        ];
-        ////////
-        this.segment = [
-            { name: "Header Text" },
-            { name: "Header Icons" },
-            { name: "Scrollable Header Text" },
-            { name: "Scrollable Header Icons" },
-            { name: "Footer Text" },
-            { name: "Footer Icons" },
-            { name: "Footer Text Icons" },
-        ];
-        ////////
-        this.button = [
-            { name: "Basic Style 1" },
-            { name: "Basic Style 2" },
-            { name: "Text" },
-            { name: "Outline" },
-            { name: "Transparent" },
-            { name: "Expand" },
-        ];
-        ////////
-        this.radio = [
-            { name: "Simple Left" },
-            { name: "Simple Right" },
-            { name: "Radio Avatar" },
-            { name: "Radio Thumbnail" },
-        ];
-        ////////
-        this.checkbox = [
-            { name: "Avatar With Square" },
-            { name: "Square Icon" },
-            { name: "Avatar With Circle" },
-            { name: "Big images" },
-        ];
-        ////////
-        this.badge = [
-            { name: "Card" },
-            { name: "Tabs" },
-            { name: "List" },
-        ];
-        ////////
-        this.toggle = [
-            { name: "Avatar" },
-            { name: "Simple left Side" },
-        ];
-        ////////
-        this.searchbar = [
-            { name: "Simple" },
-            { name: "Images" },
-        ];
-        ////////
-        this.fab = [
-            { name: "Simple Text" },
-            { name: "Simple Icon" },
-            { name: "Up Text" },
-            { name: "Up Icon" },
-            { name: "Down Text" },
-            { name: "Down Icon" },
-            { name: "Left Text" },
-            { name: "Left Icon" },
-            { name: "Right Text" },
-            { name: "Right Icon" },
-            { name: "Middle Text" },
-            { name: "Middle Icon" },
-        ];
-        ////////
-        this.alert = [
-            { name: "Basic" },
-            { name: "Confirmation" },
-            { name: "Prompt" },
-            { name: "Radio" },
-            { name: "Checkbox" },
-        ];
-        ////////
-        this.toast = [
-            { name: "Bottom Toast" },
-            { name: "Middle Toast" },
-            { name: "Top Toast" },
-        ];
-        ////////
-        this.actionSheet = [
-            { name: "Simple Text" },
-            { name: "Icons" },
-        ];
-        //////////
-        this.form = [
-            { name: "Login Theme One" },
-            { name: "Login Theme Two" },
-            { name: "Login Theme Three" },
-            { name: "Register Theme One" },
-            { name: "Register Theme Two" },
-            { name: "Register Theme Three" },
-            { name: "Forget Theme One" },
-            { name: "Forget Theme Two" },
-            { name: "Forget Theme Three" },
-        ];
         //for status bar
         this.initializeApp();
         this.itemsHome = [
@@ -1859,598 +1732,10 @@ var AppComponent = /** @class */ (function () {
         });
     }
     ////////
-    AppComponent.prototype.goToGrid = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("grid-two-line");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("grid-three-line");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("grid-category");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("grid-subcategory");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("grid-album");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("grid-section");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("grid-with-header");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToCard = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("card-dashboard");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("card-list-simple");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("card-list-avatar");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("card-shoping-simple");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("card-shoping-slider");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("card-timeline-theme-one");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("card-timeline-theme-two");
-        }
-        if (i == 7) {
-            this.navCtrl.navigateForward("card-timeline-theme-three");
-        }
-        if (i == 8) {
-            this.navCtrl.navigateForward("card-images");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSlider = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("slider-simple");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("slider-images");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("slider-autoplay");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("slider-arrows");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToTabs = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("tab-footer-text");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("tab-footer-icon");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("tab-footer-text-icon");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("tab-footer-text-icon-badge");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("tab-header-text");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("tab-header-icon");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("tab-header-text-icon");
-        }
-        if (i == 7) {
-            this.navCtrl.navigateForward("tab-header-text-icon-badge");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSegment = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("segment-header-text");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("segment-header-icon");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("segment-scrollable-header-text");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("segment-scrollable-header-icon");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("segment-footer-text");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("segment-footer-icon");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("segment-footer-text-icon");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToButton = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("button-basic-one");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("button-basic-two");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("button-text");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("button-outline");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("button-transparent");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("button-expand");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToRadio = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("radio-simple-left");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("radio-simple-right");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("radio-circle-with-avatar");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("radio-square-with-big-image");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToCheckbox = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("checkbox-simple");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("checkbox-square");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("checkbox-right-with-avatar");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("checkbox-with-big-image");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToBadge = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("badge-with-card");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("badge-with-tab");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("badge-with-list");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToToggle = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("toggle-with-avatar");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("toggle-simple-left");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSearchbar = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("searchbar-simple");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("searchbar-with-images");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToFab = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("fab-simple-text");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("fab-simple-icon");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("fab-up-text");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("fab-up-icon");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("fab-down-text");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("fab-down-icon");
-        }
-        else if (i == 6) {
-            this.navCtrl.navigateForward("fab-left-text");
-        }
-        else if (i == 7) {
-            this.navCtrl.navigateForward("fab-left-icon");
-        }
-        else if (i == 8) {
-            this.navCtrl.navigateForward("fab-right-text");
-        }
-        else if (i == 9) {
-            this.navCtrl.navigateForward("fab-right-icon");
-        }
-        else if (i == 10) {
-            this.navCtrl.navigateForward("fab-middle-text");
-        }
-        else if (i == 11) {
-            this.navCtrl.navigateForward("fab-middle-icon");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToAlert = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("alert-basic");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("alert-confirmation");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("alert-prompt");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("alert-radio");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("alert-checkbox");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToToast = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("toast-bottom");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("toast-middle");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("toast-top");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToActionSheet = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("actionsheet-simple");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("actionsheet-icon");
-        }
-    };
-    ////////
     AppComponent.prototype.goToList = function () {
         this.menuCtrl.close();
         this.navCtrl.navigateForward("latest");
     };
-    /////
-    ////////////
-    AppComponent.prototype.expandItemList = function (item) {
-        this.visibleList = !this.visibleList;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsList.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ///
-    ////////////
-    AppComponent.prototype.expandItemGrid = function (item) {
-        this.visibleGrid = !this.visibleGrid;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsGrid.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemCard = function (item) {
-        this.visibleCard = !this.visibleCard;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsCard.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSlider = function (item) {
-        this.visibleSlider = !this.visibleSlider;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSlider.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemTab = function (item) {
-        this.visibleTab = !this.visibleTab;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsTab.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSegment = function (item) {
-        this.visibleSegment = !this.visibleSegment;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSegment.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemButton = function (item) {
-        this.visibleButton = !this.visibleButton;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsButton.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemRadio = function (item) {
-        this.visibleRadio = !this.visibleRadio;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsRadio.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemCheckbox = function (item) {
-        this.visibleCheckbox = !this.visibleCheckbox;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsCheckbox.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemBadge = function (item) {
-        this.visibleBadge = !this.visibleBadge;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsBadge.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemToggle = function (item) {
-        this.visibleToggle = !this.visibleToggle;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsToogle.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSearchbar = function (item) {
-        this.visibleSearchbar = !this.visibleSearchbar;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSearchbar.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemFAB = function (item) {
-        this.visibleFab = !this.visibleFab;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsFab.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemAlert = function (item) {
-        this.visibleAlert = !this.visibleAlert;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsAlert.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemToast = function (item) {
-        this.visibleToast = !this.visibleToast;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsToast.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemActionSheet = function (item) {
-        this.visibleActionsheet = !this.visibleActionsheet;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsActionsheet.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemForm = function (item) {
-        this.visibleActionsheet = !this.visibleActionsheet;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsForm.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    /////
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.menuCtrl.enable(true, 'Menu1');
@@ -2475,160 +1760,41 @@ var AppComponent = /** @class */ (function () {
             }
         });
     };
-    // For Expandable Function
-    AppComponent.prototype.expandItem = function (i, item) {
-        if (i == 0) {
-            this.visibleHome = !this.visibleHome;
-            if (item.expandedHome) {
-                item.expandedHome = false;
-            }
-            else {
-                this.itemsHome.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-        if (i == 1) {
-            this.visibleCategory = !this.visibleCategory;
-            if (item.expanded) {
-                item.expanded = false;
-            }
-            else {
-                this.itemsCategory.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-        if (i == 2) {
-            this.visibleShop = !this.visibleShop;
-            if (item.expanded) {
-                item.expanded = false;
-            }
-            else {
-                this.itemsShop.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-    };
-    //////////////////
-    AppComponent.prototype.homePage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("ehome");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("ehometwo");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("ehomethree");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("ehomefour");
-        }
-        else if (i == 4) {
-            this.nav.navigateForward("ehomefive");
-        }
-    };
-    AppComponent.prototype.categoryPage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("ecategory");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("ecategorytwo");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("ecategorythree");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("ecategoryfour");
-        }
-        else if (i == 4) {
-            this.nav.navigateForward("ecategoryfive");
-        }
-        else if (i == 5) {
-            this.nav.navigateForward("ecategorysix");
-        }
-    };
-    AppComponent.prototype.shopPage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("eshopnewest");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("eshoptopseller");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("eshopdeals");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("eshopmostliked");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToForm = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("form-login-one");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("form-login-two");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("form-login-three");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("form-register-one");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("form-register-two");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("form-register-three");
-        }
-        else if (i == 6) {
-            this.navCtrl.navigateForward("form-forget-one");
-        }
-        else if (i == 7) {
-            this.navCtrl.navigateForward("form-forget-two");
-        }
-        else if (i == 8) {
-            this.navCtrl.navigateForward("form-forget-three");
-        }
+    // Share Options
+    AppComponent.prototype.share = function () {
+        var _this = this;
+        this.platform.ready().then(function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.socialSharing.share('2KnowMySelf Psychology - The Article Pocket Book - Download at https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself').then(function () {
+                        }).catch(function (err) {
+                            console.log(err);
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); });
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: ["app.scss"]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
-            _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Events"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["MenuController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Events"],
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"],
             _article_article_service__WEBPACK_IMPORTED_MODULE_6__["ArticleService"],
-            _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"]])
+            _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"],
+            _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_1__["SocialSharing"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -2653,18 +1819,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
-/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./providers/recent_index */ "./src/app/providers/recent_index.ts");
-/* harmony import */ var _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/menu-component/menu-component.component */ "./src/app/components/menu-component/menu-component.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
-
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
+/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./providers/recent_index */ "./src/app/providers/recent_index.ts");
+/* harmony import */ var _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/menu-component/menu-component.component */ "./src/app/components/menu-component/menu-component.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
 
 
 
@@ -2686,26 +1850,25 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_13__["MenuComponentComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_12__["MenuComponentComponent"]],
             entryComponents: [],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"].forRoot(),
-                _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_9__["IonicStorageModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [
-                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__["StatusBar"],
-                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"],
-                _article_article_service__WEBPACK_IMPORTED_MODULE_15__["ArticleService"],
-                _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_11__["FavoriteProvider"],
-                _providers_recent_index__WEBPACK_IMPORTED_MODULE_12__["RecentProvider"],
+                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
+                _article_article_service__WEBPACK_IMPORTED_MODULE_14__["ArticleService"],
+                _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_10__["FavoriteProvider"],
+                _providers_recent_index__WEBPACK_IMPORTED_MODULE_11__["RecentProvider"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"] },
-                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_16__["SocialSharing"]
+                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__["SocialSharing"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
