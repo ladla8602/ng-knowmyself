@@ -88,19 +88,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _services_admobfree_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/admobfree.service */ "./src/app/services/admobfree.service.ts");
 
 
 
- //toast controller package
+
+
 
 var ListInfinteScrollPage = /** @class */ (function () {
-    function ListInfinteScrollPage(route, articleService, toast) {
+    function ListInfinteScrollPage(route, articleService, toast, platform, admobFreeService) {
         this.route = route;
         this.articleService = articleService;
         this.toast = toast;
+        this.platform = platform;
+        this.admobFreeService = admobFreeService;
         this.products = [];
         this.staticproducts = [];
         this.scrollLength = 5;
+        this.adsInitialize();
     }
     ListInfinteScrollPage.prototype.ngOnInit = function () {
         this.cat_id = this.route.snapshot.paramMap.get('cat_id');
@@ -108,6 +113,12 @@ var ListInfinteScrollPage = /** @class */ (function () {
     };
     ListInfinteScrollPage.prototype.ngOnDestroy = function () {
         this.products = [];
+    };
+    ListInfinteScrollPage.prototype.adsInitialize = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            _this.admobFreeService.BannerAd();
+        });
     };
     ListInfinteScrollPage.prototype.initializeIndex = function (id) {
         var _this = this;
@@ -164,7 +175,9 @@ var ListInfinteScrollPage = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             _article_article_service__WEBPACK_IMPORTED_MODULE_4__["ArticleService"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]])
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"],
+            _services_admobfree_service__WEBPACK_IMPORTED_MODULE_5__["AdmobFreeService"]])
     ], ListInfinteScrollPage);
     return ListInfinteScrollPage;
 }());

@@ -17,6 +17,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _actionsheet_simple_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actionsheet-simple.page */ "./src/app/actionsheet-simple/actionsheet-simple.page.ts");
+/* harmony import */ var _hide_header_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hide-header.directive */ "./src/app/hide-header.directive.ts");
+
 
 
 
@@ -41,7 +43,7 @@ var ActionsheetSimplePageModule = /** @class */ (function () {
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
             ],
-            declarations: [_actionsheet_simple_page__WEBPACK_IMPORTED_MODULE_6__["ActionsheetSimplePage"]]
+            declarations: [_actionsheet_simple_page__WEBPACK_IMPORTED_MODULE_6__["ActionsheetSimplePage"], _hide_header_directive__WEBPACK_IMPORTED_MODULE_7__["HideHeaderDirective"]]
         })
     ], ActionsheetSimplePageModule);
     return ActionsheetSimplePageModule;
@@ -58,7 +60,7 @@ var ActionsheetSimplePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button expand=\"block\" (click)=\"backToIndex()\">\n        <ion-icon name=\"arrow-back\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>{{index}}</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"unfavoriteArticle()\" *ngIf=\"isFavorite\">\n        <ion-icon name=\"star\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"favoriteArticle()\" *ngIf=\"!isFavorite\">\n        <ion-icon name=\"star-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding *ngIf=\"articles\">\n  <ion-grid *ngFor=\"let item of articles\">\n    <div [innerHtml]=\"item.article\"></div>\n  </ion-grid>\n</ion-content>\n<!-- Footer without a border -->\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <ion-row>\n            <ion-col style=\"text-align: center;\">\n              <div ion-button icon-only (click)=\"share()\" color=\"primary\" clear>\n            <ion-icon class=\"share-icon\" name=\"share\"></ion-icon>\n            </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaEmail()\" color=\"primary\" clear>\n              <ion-icon class=\"share-icon\" name=\"mail\"></ion-icon>\n            </div>\n              </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaTwitter()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-twitter\"></ion-icon>\n                  </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n              <div ion-button icon-only (click)=\"shareViaFacebook()\" color=\"primary\" clear>\n            <ion-icon  class=\"share-icon\" name=\"logo-facebook\"></ion-icon>\n             </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaWhatsapp()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-whatsapp\"></ion-icon>\n                </div>\n            </ion-col>\n          </ion-row>\n    </ion-toolbar>\n  </ion-footer>\n<ion-content no-padding *ngIf=\"articles.length == 0\">\n    <ion-card>\n        <ion-item>\n        <ion-label>\n            <h3><ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text></h3>\n            <p><ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text></p>\n        </ion-label>\n    </ion-item>\n    <ion-card-content>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n    </ion-card-content>\n    <ion-row>\n        <ion-col padding>\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\n        </ion-col>\n        \n    </ion-row>\n    </ion-card>\n</ion-content>"
+module.exports = "<ion-header #header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button expand=\"block\" (click)=\"backToIndex()\">\n        <ion-icon name=\"arrow-back\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>{{index}}</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"unfavoriteArticle()\" *ngIf=\"isFavorite\">\n        <ion-icon name=\"star\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button expand=\"block\" (click)=\"favoriteArticle()\" *ngIf=\"!isFavorite\">\n        <ion-icon name=\"star-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding *ngIf=\"articles\" scrollEvents=\"true\" appHideHeader [header]=\"header\">\n  <ion-grid *ngFor=\"let item of articles\">\n    <div [innerHtml]=\"item.article\"></div>\n  </ion-grid>\n</ion-content>\n<!-- Footer without a border -->\n<ion-footer class=\"ion-no-border\" #footer>\n    <ion-toolbar>\n        <ion-row>\n            <ion-col style=\"text-align: center;\">\n              <div ion-button icon-only (click)=\"share()\" color=\"primary\" clear>\n            <ion-icon class=\"share-icon\" name=\"share\"></ion-icon>\n            </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaEmail()\" color=\"primary\" clear>\n              <ion-icon class=\"share-icon\" name=\"mail\"></ion-icon>\n            </div>\n              </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaTwitter()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-twitter\"></ion-icon>\n                  </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n              <div ion-button icon-only (click)=\"shareViaFacebook()\" color=\"primary\" clear>\n            <ion-icon  class=\"share-icon\" name=\"logo-facebook\"></ion-icon>\n             </div>\n            </ion-col>\n            <ion-col style=\"text-align: center;\">\n                <div ion-button icon-only (click)=\"shareViaWhatsapp()\" color=\"primary\" clear>\n                    <ion-icon class=\"share-icon\" name=\"logo-whatsapp\"></ion-icon>\n                </div>\n            </ion-col>\n          </ion-row>\n    </ion-toolbar>\n  </ion-footer>\n<ion-content no-padding *ngIf=\"articles.length == 0\">\n    <ion-card>\n        <ion-item>\n        <ion-label>\n            <h3><ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text></h3>\n            <p><ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text></p>\n        </ion-label>\n    </ion-item>\n    <ion-card-content>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 70%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 50%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n    </ion-card-content>\n    <ion-row>\n        <ion-col padding>\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\n        </ion-col>\n        \n    </ion-row>\n    </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -84,19 +86,17 @@ module.exports = "ion-content ion-grid {\n  padding: 0 0 16px 0;\n  margin-botto
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionsheetSimplePage", function() { return ActionsheetSimplePage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../article/article.service */ "./src/app/article/article.service.ts");
-/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
-/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../providers/recent_index */ "./src/app/providers/recent_index.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
+/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../providers/recent_index */ "./src/app/providers/recent_index.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _services_admobfree_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../services/admobfree.service */ "./src/app/services/admobfree.service.ts");
 
 
-
- //actionsheet controller package
 
 
 
@@ -107,18 +107,17 @@ __webpack_require__.r(__webpack_exports__);
 
 var ActionsheetSimplePage = /** @class */ (function () {
     //action sheet package declaration
-    function ActionsheetSimplePage(platform, route, actionSheetController, location, articleService, storage, favoriteProvider, recentProvider, toast, socialSharing) {
+    function ActionsheetSimplePage(platform, route, location, articleService, favoriteProvider, recentProvider, toast, socialSharing, admobFreeService) {
         var _this = this;
         this.platform = platform;
         this.route = route;
-        this.actionSheetController = actionSheetController;
         this.location = location;
         this.articleService = articleService;
-        this.storage = storage;
         this.favoriteProvider = favoriteProvider;
         this.recentProvider = recentProvider;
         this.toast = toast;
         this.socialSharing = socialSharing;
+        this.admobFreeService = admobFreeService;
         this.articles = [];
         this.staticarticles = [];
         this.isFavorite = false;
@@ -126,9 +125,16 @@ var ActionsheetSimplePage = /** @class */ (function () {
         this.favoriteProvider.isFavorite(this.index_id).then(function (isFav) {
             _this.isFavorite = isFav;
         });
+        this.adsInitialize();
     }
     ActionsheetSimplePage.prototype.ngOnInit = function () {
         this.initializeArticle(this.index_id);
+    };
+    ActionsheetSimplePage.prototype.adsInitialize = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            _this.admobFreeService.BannerAd();
+        });
     };
     ActionsheetSimplePage.prototype.initializeArticle = function (id) {
         var _this = this;
@@ -275,23 +281,89 @@ var ActionsheetSimplePage = /** @class */ (function () {
         this.location.back();
     };
     ActionsheetSimplePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-actionsheet-simple',
             template: __webpack_require__(/*! ./actionsheet-simple.page.html */ "./src/app/actionsheet-simple/actionsheet-simple.page.html"),
             styles: [__webpack_require__(/*! ./actionsheet-simple.page.scss */ "./src/app/actionsheet-simple/actionsheet-simple.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ActionSheetController"],
-            _angular_common__WEBPACK_IMPORTED_MODULE_8__["Location"],
-            _article_article_service__WEBPACK_IMPORTED_MODULE_5__["ArticleService"],
-            _ionic_storage__WEBPACK_IMPORTED_MODULE_9__["Storage"],
-            _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_6__["FavoriteProvider"],
-            _providers_recent_index__WEBPACK_IMPORTED_MODULE_7__["RecentProvider"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"],
-            _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_1__["SocialSharing"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_6__["Platform"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"],
+            _article_article_service__WEBPACK_IMPORTED_MODULE_3__["ArticleService"],
+            _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_4__["FavoriteProvider"],
+            _providers_recent_index__WEBPACK_IMPORTED_MODULE_5__["RecentProvider"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["ToastController"],
+            _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_8__["SocialSharing"],
+            _services_admobfree_service__WEBPACK_IMPORTED_MODULE_9__["AdmobFreeService"]])
     ], ActionsheetSimplePage);
     return ActionsheetSimplePage;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/hide-header.directive.ts":
+/*!******************************************!*\
+  !*** ./src/app/hide-header.directive.ts ***!
+  \******************************************/
+/*! exports provided: HideHeaderDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HideHeaderDirective", function() { return HideHeaderDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
+
+
+var HideHeaderDirective = /** @class */ (function () {
+    function HideHeaderDirective(renderer, domCtrl) {
+        this.renderer = renderer;
+        this.domCtrl = domCtrl;
+        this.lastY = 0;
+    }
+    HideHeaderDirective.prototype.ngOnInit = function () {
+        var _this = this;
+        this.header = this.header.el;
+        this.domCtrl.write(function () {
+            _this.renderer.setStyle(_this.header, 'transition', 'margin-top 700ms');
+        });
+    };
+    HideHeaderDirective.prototype.onContentScroll = function ($event) {
+        var _this = this;
+        if ($event.detail.scrollTop > this.lastY) {
+            this.domCtrl.write(function () {
+                _this.renderer.setStyle(_this.header, 'margin-top', "-" + _this.header.clientHeight + "px");
+            });
+        }
+        else {
+            this.domCtrl.write(function () {
+                _this.renderer.setStyle(_this.header, 'margin-top', '0');
+            });
+        }
+        this.lastY = $event.detail.scrollTop;
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('header'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], HideHeaderDirective.prototype, "header", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('ionScroll', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], HideHeaderDirective.prototype, "onContentScroll", null);
+    HideHeaderDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appHideHeader]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["DomController"]])
+    ], HideHeaderDirective);
+    return HideHeaderDirective;
 }());
 
 

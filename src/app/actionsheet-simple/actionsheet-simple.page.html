@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header #header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button expand="block" (click)="backToIndex()">
+      <ion-button expand="block" routerLink="/index/{{cat_id}}" routerDirection="backward">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -19,13 +19,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding *ngIf="articles">
+<ion-content padding *ngIf="articles" scrollEvents="true" appHideHeader [header]="header">
   <ion-grid *ngFor="let item of articles">
     <div [innerHtml]="item.article"></div>
   </ion-grid>
 </ion-content>
 <!-- Footer without a border -->
-<ion-footer class="ion-no-border">
+<ion-footer class="ion-no-border" #footer>
     <ion-toolbar>
         <ion-row>
             <ion-col style="text-align: center;">

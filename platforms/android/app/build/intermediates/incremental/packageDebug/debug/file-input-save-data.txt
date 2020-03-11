@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 06 11:53:53 IST 2020
+#Wed Mar 11 17:29:00 IST 2020
 1073.file=/var/www/html/ng-knowmyself/app/platforms/android/app/build/intermediates/assets/debug/www/svg/ios-basket.svg
 1090.base=/var/www/html/ng-knowmyself/app/platforms/android/app/build/intermediates/assets/debug
 1007.base=/var/www/html/ng-knowmyself/app/platforms/android/app/build/intermediates/assets/debug

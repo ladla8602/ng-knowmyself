@@ -1,10 +1,10 @@
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Component } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Platform, Events, NavController, ModalController, MenuController } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 import { ArticleService } from './article/article.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

@@ -1,15 +1,13 @@
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';//actionsheet controller package
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService } from '../article/article.service';
 import { FavoriteProvider } from '../providers/bookmark_index';
 import { RecentProvider } from '../providers/recent_index';
 
 import { ToastController } from '@ionic/angular';
-import { Location } from '@angular/common';
-import { Storage } from '@ionic/storage';
 import { Platform } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 @Component({
   selector: 'app-actionsheet-simple',
   templateUrl: './actionsheet-simple.page.html',
@@ -17,6 +15,7 @@ import { Platform } from '@ionic/angular';
 })
 export class ActionsheetSimplePage implements OnInit {
   public index_id: string;
+  public cat_id: string;
   public articles: any = [];
   public staticarticles: any = [];
   public index: string;
@@ -26,26 +25,21 @@ export class ActionsheetSimplePage implements OnInit {
 
   //action sheet package declaration
   constructor(
-    public platform: Platform,
+    private platform: Platform,
     private route: ActivatedRoute,
-    public actionSheetController: ActionSheetController,
-    private location: Location,
     private articleService: ArticleService,
-    private storage: Storage,
     public favoriteProvider: FavoriteProvider,
     public recentProvider: RecentProvider,
     public toast: ToastController,
     private socialSharing: SocialSharing
-    ) { 
-    
-    this.index_id = this.route.snapshot.paramMap.get('index_id');
-    this.favoriteProvider.isFavorite(this.index_id).then(isFav => {
-      this.isFavorite = isFav;
-    })
-  }
+    ) { }
 
   ngOnInit() {
+    this.index_id = this.route.snapshot.paramMap.get('index_id');
     this.initializeArticle(this.index_id);
+    this.favoriteProvider.isFavorite(this.index_id).then(isFav => {
+        this.isFavorite = isFav;
+      });
   }
 
   initializeArticle(id){
@@ -55,6 +49,7 @@ export class ActionsheetSimplePage implements OnInit {
         this.shareArticle = res[0].article;
         this.staticarticles = res;
         this.index = res[0].index;   //assigning article name
+        this.cat_id = res[0].category_id;
         //storing recently views articles index id
         this.recentProvider.favoriteFilm(this.index_id);
       }else{
@@ -95,15 +90,15 @@ export class ActionsheetSimplePage implements OnInit {
         });
         toast.present();
   }
-    stripHtml(html){
-        // Create a new div element
-        var temporalDivElement = document.createElement("div");
-        // Set the HTML content with the providen
-        temporalDivElement.innerHTML = html;
-        // Retrieve the text property of the element (cross-browser support)
-        return temporalDivElement.textContent || temporalDivElement.innerText || "";
-    }
-  compilemsg():string{
+    // stripHtml(html){
+    //     // Create a new div element
+    //     var temporalDivElement = document.createElement("div");
+    //     // Set the HTML content with the providen
+    //     temporalDivElement.innerHTML = html;
+    //     // Retrieve the text property of the element (cross-browser support)
+    //     return temporalDivElement.textContent || temporalDivElement.innerText || "";
+    // }
+  compilemsg():string {
     var msg = this.index + "\n" + this.shareArticle ;
     return msg.concat(" \n Sent from 2KnowMySelf App! - https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself");
   }
@@ -161,8 +156,4 @@ export class ActionsheetSimplePage implements OnInit {
             alert('Twitter not available');
           });
       }
-    
-  backToIndex(){
-    this.location.back();
-  }
 }

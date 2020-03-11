@@ -2237,7 +2237,8 @@ var themes = {
     }
 };
 var HomePage = /** @class */ (function () {
-    function HomePage(admobFreeService, articleService, service, events, menuCtrl, theme, navCtrl, elementRef, toast) {
+    function HomePage(platform, admobFreeService, articleService, service, events, menuCtrl, theme, navCtrl, elementRef, toast) {
+        this.platform = platform;
         this.admobFreeService = admobFreeService;
         this.articleService = articleService;
         this.service = service;
@@ -2265,14 +2266,17 @@ var HomePage = /** @class */ (function () {
         this.visiableBtnAutum = true;
         this.itemColor = "#F44336";
         this.elementRef.nativeElement.style.setProperty('--my-var', this.itemColor);
-        if (!navigator.onLine) {
-            alert("No Internet Connection");
-        }
+        this.adsInitialize();
     }
     HomePage.prototype.ngOnInit = function () {
         this.initializeItems();
         this.menuCtrl.close();
-        this.admobFreeService.BannerAd();
+    };
+    HomePage.prototype.adsInitialize = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            _this.admobFreeService.BannerAd();
+        });
     };
     HomePage.prototype.ionViewWillEnter = function () {
         var _this = this;
@@ -2488,7 +2492,8 @@ var HomePage = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.page.html */ "./src/app/home/home.page.html"),
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_admobfree_service__WEBPACK_IMPORTED_MODULE_6__["AdmobFreeService"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+            _services_admobfree_service__WEBPACK_IMPORTED_MODULE_6__["AdmobFreeService"],
             _article_article_service__WEBPACK_IMPORTED_MODULE_5__["ArticleService"],
             _services_custom_theme_service__WEBPACK_IMPORTED_MODULE_4__["CustomThemeService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Events"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"], _services_theme_service__WEBPACK_IMPORTED_MODULE_3__["ThemeService"],
