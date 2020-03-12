@@ -24,12 +24,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var routes = [
-    {
-        path: '',
-        component: _list_infinte_scroll_page__WEBPACK_IMPORTED_MODULE_6__["ListInfinteScrollPage"]
-    }
-];
 var ListInfinteScrollPageModule = /** @class */ (function () {
     function ListInfinteScrollPageModule() {
     }
@@ -39,7 +33,12 @@ var ListInfinteScrollPageModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
+                    {
+                        path: '',
+                        component: _list_infinte_scroll_page__WEBPACK_IMPORTED_MODULE_6__["ListInfinteScrollPage"]
+                    }
+                ])
             ],
             declarations: [_list_infinte_scroll_page__WEBPACK_IMPORTED_MODULE_6__["ListInfinteScrollPage"]]
         })
@@ -69,7 +68,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dot {\n  height: 12px;\n  width: 12px;\n  border-radius: 50%;\n  display: inline-block; }\n\n.red {\n  background-color: #FF0000; }\n\n.green {\n  background-color: #008000; }\n\nion-searchbar {\n  --background:#eee !important; }\n\n/* Custom Skeleton Line Height and Margin */\n\n.custom-skeleton ion-skeleton-text {\n  line-height: 13px; }\n\n.custom-skeleton ion-skeleton-text:last-child {\n  margin-bottom: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvbmcta25vd215c2VsZi9hcHAvc3JjL2FwcC9saXN0LWluZmludGUtc2Nyb2xsL2xpc3QtaW5maW50ZS1zY3JvbGwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIscUJBQXFCLEVBQUE7O0FBRXZCO0VBQ0UseUJBQXlCLEVBQUE7O0FBRzNCO0VBQ0UseUJBQXlCLEVBQUE7O0FBRXpCO0VBQ0UsNEJBQWEsRUFBQTs7QUFFZiwyQ0FBQTs7QUFDRjtFQUNFLGlCQUFpQixFQUFBOztBQUduQjtFQUNFLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvbGlzdC1pbmZpbnRlLXNjcm9sbC9saXN0LWluZmludGUtc2Nyb2xsLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kb3Qge1xuICBoZWlnaHQ6IDEycHg7XG4gIHdpZHRoOiAxMnB4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cbi5yZWR7XG4gIGJhY2tncm91bmQtY29sb3I6ICNGRjAwMDA7XG59XG5cbi5ncmVlbntcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwODAwMDtcbn1cbiAgaW9uLXNlYXJjaGJhcntcbiAgICAtLWJhY2tncm91bmQ6I2VlZSAhaW1wb3J0YW50O1xuICB9XG4gIC8qIEN1c3RvbSBTa2VsZXRvbiBMaW5lIEhlaWdodCBhbmQgTWFyZ2luICovXG4uY3VzdG9tLXNrZWxldG9uIGlvbi1za2VsZXRvbi10ZXh0IHtcbiAgbGluZS1oZWlnaHQ6IDEzcHg7XG59XG5cbi5jdXN0b20tc2tlbGV0b24gaW9uLXNrZWxldG9uLXRleHQ6bGFzdC1jaGlsZCB7XG4gIG1hcmdpbi1ib3R0b206IDVweDtcbn0iXX0= */"
+module.exports = ".dot {\n  height: 12px;\n  width: 12px;\n  border-radius: 50%;\n  display: inline-block; }\n\n.red {\n  background-color: #FF0000; }\n\n.green {\n  background-color: #008000; }\n\nion-searchbar {\n  --background:#eee !important; }\n\n/* Custom Skeleton Line Height and Margin */\n\n.custom-skeleton ion-skeleton-text {\n  line-height: 13px; }\n\n.custom-skeleton ion-skeleton-text:last-child {\n  margin-bottom: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Jpc2hpL0Rlc2t0b3Avbmcta25vd215c2VsZi9zcmMvYXBwL2xpc3QtaW5maW50ZS1zY3JvbGwvbGlzdC1pbmZpbnRlLXNjcm9sbC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osV0FBVztFQUNYLGtCQUFrQjtFQUNsQixxQkFBcUIsRUFBQTs7QUFFdkI7RUFDRSx5QkFBeUIsRUFBQTs7QUFHM0I7RUFDRSx5QkFBeUIsRUFBQTs7QUFFekI7RUFDRSw0QkFBYSxFQUFBOztBQUVmLDJDQUFBOztBQUNGO0VBQ0UsaUJBQWlCLEVBQUE7O0FBR25CO0VBQ0Usa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9saXN0LWluZmludGUtc2Nyb2xsL2xpc3QtaW5maW50ZS1zY3JvbGwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRvdCB7XG4gIGhlaWdodDogMTJweDtcbiAgd2lkdGg6IDEycHg7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuLnJlZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0ZGMDAwMDtcbn1cblxuLmdyZWVue1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA4MDAwO1xufVxuICBpb24tc2VhcmNoYmFye1xuICAgIC0tYmFja2dyb3VuZDojZWVlICFpbXBvcnRhbnQ7XG4gIH1cbiAgLyogQ3VzdG9tIFNrZWxldG9uIExpbmUgSGVpZ2h0IGFuZCBNYXJnaW4gKi9cbi5jdXN0b20tc2tlbGV0b24gaW9uLXNrZWxldG9uLXRleHQge1xuICBsaW5lLWhlaWdodDogMTNweDtcbn1cblxuLmN1c3RvbS1za2VsZXRvbiBpb24tc2tlbGV0b24tdGV4dDpsYXN0LWNoaWxkIHtcbiAgbWFyZ2luLWJvdHRvbTogNXB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -91,11 +90,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //toast controller package
+
 
 var ListInfinteScrollPage = /** @class */ (function () {
-    function ListInfinteScrollPage(route, articleService, toast) {
+    function ListInfinteScrollPage(route, router, articleService, toast) {
         this.route = route;
+        this.router = router;
         this.articleService = articleService;
         this.toast = toast;
         this.products = [];
@@ -103,11 +103,15 @@ var ListInfinteScrollPage = /** @class */ (function () {
         this.scrollLength = 5;
     }
     ListInfinteScrollPage.prototype.ngOnInit = function () {
+    };
+    ListInfinteScrollPage.prototype.ionViewWillEnter = function () {
         this.cat_id = this.route.snapshot.paramMap.get('cat_id');
         this.initializeIndex(this.cat_id);
     };
-    ListInfinteScrollPage.prototype.ngOnDestroy = function () {
+    ListInfinteScrollPage.prototype.ionViewWillLeave = function () {
         this.products = [];
+    };
+    ListInfinteScrollPage.prototype.ngOnDestroy = function () {
     };
     ListInfinteScrollPage.prototype.initializeIndex = function (id) {
         var _this = this;
@@ -163,6 +167,7 @@ var ListInfinteScrollPage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./list-infinte-scroll.page.scss */ "./src/app/list-infinte-scroll/list-infinte-scroll.page.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _article_article_service__WEBPACK_IMPORTED_MODULE_4__["ArticleService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]])
     ], ListInfinteScrollPage);

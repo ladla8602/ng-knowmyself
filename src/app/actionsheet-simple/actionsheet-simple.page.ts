@@ -1,15 +1,14 @@
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';//actionsheet controller package
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService } from '../article/article.service';
 import { FavoriteProvider } from '../providers/bookmark_index';
 import { RecentProvider } from '../providers/recent_index';
 
 import { ToastController } from '@ionic/angular';
-import { Location } from '@angular/common';
-import { Storage } from '@ionic/storage';
 import { Platform } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { AdmobFreeService } from '../services/admobfree.service';
+
 @Component({
   selector: 'app-actionsheet-simple',
   templateUrl: './actionsheet-simple.page.html',
@@ -17,45 +16,56 @@ import { Platform } from '@ionic/angular';
 })
 export class ActionsheetSimplePage implements OnInit {
   public index_id: string;
+  public cat_id: string;
   public articles: any = [];
   public staticarticles: any = [];
   public index: string;
   public isFavorite = false;
   public msg: any;
+  public shareArticle: string;
+  public randomNumber: number;
 
   //action sheet package declaration
   constructor(
-    public platform: Platform,
+    private platform: Platform,
     private route: ActivatedRoute,
-    public actionSheetController: ActionSheetController,
-    private location: Location,
     private articleService: ArticleService,
-    private storage: Storage,
     public favoriteProvider: FavoriteProvider,
     public recentProvider: RecentProvider,
     public toast: ToastController,
-    private socialSharing: SocialSharing
-    ) { 
-    
-    this.index_id = this.route.snapshot.paramMap.get('index_id');
-    this.favoriteProvider.isFavorite(this.index_id).then(isFav => {
-      this.isFavorite = isFav;
-    })
-  }
+    private socialSharing: SocialSharing,
+    private admobFreeService: AdmobFreeService
+    ) { }
 
   ngOnInit() {
+    this.index_id = this.route.snapshot.paramMap.get('index_id');
     this.initializeArticle(this.index_id);
-    this.compilemsg();
+    this.favoriteProvider.isFavorite(this.index_id).then(isFav => {
+        this.isFavorite = isFav;
+      });
   }
-
+  ionViewDidEnter() {
+    this.randomNumber = this.getRandomInt(3);
+    console.log(this.randomNumber);
+    if(this.randomNumber === 0){
+        this.admobFreeService.InterstitialAd();
+    }
+  }
+  getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
   initializeArticle(id){
     this.articleService.getArticle(id).subscribe(res => {
       if(res && res.length){
         this.articles = res;
+        this.shareArticle = res[0].article;
         this.staticarticles = res;
         this.index = res[0].index;   //assigning article name
+        this.cat_id = res[0].category_id;
         //storing recently views articles index id
         this.recentProvider.favoriteFilm(this.index_id);
+      }else{
+          this.articles = [];
       }
       
     });
@@ -92,8 +102,16 @@ export class ActionsheetSimplePage implements OnInit {
         });
         toast.present();
   }
-  compilemsg():string{
-    var msg = this.index + "\n" + this.articles.article ;
+    // stripHtml(html){
+    //     // Create a new div element
+    //     var temporalDivElement = document.createElement("div");
+    //     // Set the HTML content with the providen
+    //     temporalDivElement.innerHTML = html;
+    //     // Retrieve the text property of the element (cross-browser support)
+    //     return temporalDivElement.textContent || temporalDivElement.innerText || "";
+    // }
+  compilemsg():string {
+    var msg = this.index + "\n" + this.shareArticle ;
     return msg.concat(" \n Sent from 2KnowMySelf App! - https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself");
   }
     // Share Options
@@ -110,7 +128,8 @@ export class ActionsheetSimplePage implements OnInit {
       shareViaEmail() {
         this.socialSharing.canShareViaEmail().then(() => {
           this.platform.ready().then(() => {
-            this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
+              this.msg = this.compilemsg();
+            this.socialSharing.shareViaEmail('Download Awesome Psychology Article Pocket App \n' + this.msg, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself', [])
           });
         }).catch((err) => {
           alert('Email not available')
@@ -119,6 +138,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via WhatsApp
       shareViaWhatsapp() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaWhatsApp(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');
@@ -129,6 +149,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via Facebook
       shareViaFacebook() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaFacebook(this.msg, null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');
@@ -139,6 +160,7 @@ export class ActionsheetSimplePage implements OnInit {
     
       // Share Via Twitter
       shareViaTwitter() {
+        this.msg = this.compilemsg();
         this.socialSharing.shareViaTwitter('2KnowMySelf Psychology - The Article Pocket Book', null, 'https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself')
           .then(() => {
             console.log('It works');
@@ -146,8 +168,4 @@ export class ActionsheetSimplePage implements OnInit {
             alert('Twitter not available');
           });
       }
-    
-  backToIndex(){
-    this.location.back();
-  }
 }

@@ -1,11 +1,11 @@
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Component } from '@angular/core';
 import { ElementRef } from '@angular/core';
-import { Platform, Events, NavController, ModalController, MenuController } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { Platform, Events, NavController, ModalController, MenuController, AlertController } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 import { ArticleService } from './article/article.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -79,7 +79,6 @@ export class AppComponent {
   // constructor
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     public menuCtrl: MenuController,
     public modalCntrl: ModalController,
@@ -90,7 +89,9 @@ export class AppComponent {
     private elementRef: ElementRef,
     private articleService: ArticleService,
     private storage: Storage,
-    private socialSharing: SocialSharing
+    private socialSharing: SocialSharing,
+    private oneSignal: OneSignal,
+    private alertCtrl: AlertController
   ) {
     //for status bar
     this.initializeApp();
@@ -219,8 +220,51 @@ export class AppComponent {
   }
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.hide();
+      this.statusBar.show();
+      if (this.platform.is('cordova')) {
+        this.setupPush();
+      }
     });
+  }
+
+  setupPush() {
+    // I recommend to put these into your environment.ts
+    this.oneSignal.startInit('37d89d56-4d35-4e95-81b5-8a64e274d1c5', '622987584855');
+ 
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.None);
+ 
+    // Notifcation was received in general
+    this.oneSignal.handleNotificationReceived().subscribe(data => {
+      let msg = data.payload.body;
+      let title = data.payload.title;
+      let additionalData = data.payload.additionalData;
+      this.showAlert(title, msg, additionalData.task);
+    });
+ 
+    // Notification was really clicked/opened
+    this.oneSignal.handleNotificationOpened().subscribe(data => {
+      // Just a note that the data is a different place here!
+      let additionalData = data.notification.payload.additionalData;
+ 
+      this.showAlert('New Article Published', 'Go To Latest Article Section', additionalData.task);
+    });
+ 
+    this.oneSignal.endInit();
+  }
+  async showAlert(title, msg, task) {
+    const alert = await this.alertCtrl.create({
+      header: title,
+      subHeader: msg,
+      buttons: [
+        {
+          text: `View`,
+          handler: () => {
+            this.menuCtrl.open();
+          }
+        }
+      ]
+    })
+    alert.present();
   }
   initializeLatestArticle(){
     this.articleService.getLatestArticle().subscribe(res => {

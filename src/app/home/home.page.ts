@@ -1,12 +1,11 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
-import { MenuController, ModalController, NavController, Events } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { Platform, MenuController, NavController, Events } from '@ionic/angular';
 import { ThemeService } from '../services/theme.service';
-import { ViewChild } from '@angular/core';
 import { CustomThemeService } from '../services/custom-theme.service';
 import { ElementRef } from '@angular/core';
 import { ToastController } from '@ionic/angular';//toast controller package
 import { ArticleService } from '../article/article.service';
-
+import { AdmobFreeService } from '../services/admobfree.service';
 
 const themes = {
   //red color o.k
@@ -129,17 +128,17 @@ export class HomePage implements OnInit{
   public staticitems:any = [];
   public bookmarkCount: number = 0;
   constructor(
+    private platform: Platform,
+    private admobFreeService: AdmobFreeService,
     private articleService: ArticleService,
     private service: CustomThemeService,
     private events: Events, public menuCtrl: MenuController, private theme: ThemeService,
-    private navCtrl: NavController, private elementRef: ElementRef,
+    private elementRef: ElementRef,
     public toast: ToastController) {
     this.visiableBtnAutum = true;
     this.itemColor = "#F44336";
     this.elementRef.nativeElement.style.setProperty('--my-var', this.itemColor);
-    if (!navigator.onLine) {
-        alert("No Internet Connection");
-    }
+    this.adsInitialize();
 }
 
 ngOnInit(){
@@ -147,6 +146,11 @@ ngOnInit(){
     this.menuCtrl.close();
 }
 
+adsInitialize(){
+    this.platform.ready().then(() => {
+        this.admobFreeService.BannerAd();
+      });
+}
   ionViewWillEnter() {
     this.menuCtrl.enable(false, 'Menu2')
     this.menuCtrl.enable(true, 'Menu1')
@@ -317,10 +321,10 @@ ngOnInit(){
         this.staticitems = res;
     });
     this.items = this.staticitems;
-}
-resetItems(){
-    this.items = this.staticitems;
-}
+    }
+    resetItems(){
+        this.items = this.staticitems;
+    }
 
     getItems(ev) {
         // Reset items back to all of the items

@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header #header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button expand="block" (click)="backToIndex()">
+      <ion-button expand="block" routerLink="/index/{{cat_id}}" routerDirection="backward">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -19,43 +19,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding *ngIf="articles">
+<ion-content padding *ngIf="articles" scrollEvents="true" appHideHeader [header]="header">
   <ion-grid *ngFor="let item of articles">
     <div [innerHtml]="item.article"></div>
   </ion-grid>
-</ion-content>
-<!-- Footer without a border -->
-<ion-footer class="ion-no-border">
-    <ion-toolbar>
-        <ion-row>
-            <ion-col style="text-align: center;">
-              <button ion-button icon-only (click)="share()" color="primary" clear>
-            <ion-icon class="share-icon" name="share"></ion-icon>
-            </button>
-            </ion-col>
-            <ion-col style="text-align: center;">
-                <button ion-button icon-only (click)="shareViaEmail()" color="primary" clear>
-              <ion-icon class="share-icon" name="mail"></ion-icon>
-            </button>
-              </ion-col>
-            <ion-col style="text-align: center;">
-                <button ion-button icon-only (click)="shareViaTwitter()" color="primary" clear>
-                    <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
-                  </button>
-            </ion-col>
-            <ion-col style="text-align: center;">
-              <button ion-button icon-only (click)="shareViaFacebook()" color="primary" clear>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light">
+        <ion-icon class="share-icon" name="share"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button (click)="shareViaWhatsapp()" color="primary" clear>
+            <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="shareViaFacebook()" color="primary" clear>
             <ion-icon  class="share-icon" name="logo-facebook"></ion-icon>
-             </button>
-            </ion-col>
-            <ion-col style="text-align: center;">
-                <button ion-button icon-only (click)="shareViaWhatsapp()" color="primary" clear>
-                    <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
-                </button>
-            </ion-col>
-          </ion-row>
-    </ion-toolbar>
-  </ion-footer>
+        </ion-fab-button>
+        <ion-fab-button (click)="shareViaTwitter()" color="primary" clear>
+            <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="shareViaEmail()" color="primary" clear>
+            <ion-icon class="share-icon" name="mail"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="share()" color="primary" clear>
+            <ion-icon class="share-icon" name="share"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
 <ion-content no-padding *ngIf="articles.length == 0">
     <ion-card>
         <ion-item>

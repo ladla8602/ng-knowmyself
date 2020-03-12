@@ -110,7 +110,7 @@
               </ion-header>
             <ion-list *ngIf="items">
                 <div *ngFor="let item of items">
-                    <ion-item *ngIf="item.no_of_articles != '0'; else noArticleBlock" routerLink="/index/{{item.id}}" routerDirection="forward">
+                    <ion-item *ngIf="item.no_of_articles != '0'; else noArticleBlock" routerLink="/index/{{item.id}}" routerDirection="root">
                     
                             <ion-text style="font-weight: 700;">
                                 {{ item.category }}

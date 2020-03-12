@@ -833,500 +833,25 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../badge-card/badge-card.module": [
-		"./src/app/badge-card/badge-card.module.ts",
-		"badge-card-badge-card-module"
-	],
-	"../badge-movie/badge-movie.module": [
-		"./src/app/badge-movie/badge-movie.module.ts",
-		"badge-movie-badge-movie-module"
-	],
-	"../badge-setting/badge-setting.module": [
-		"./src/app/badge-setting/badge-setting.module.ts",
-		"common",
-		"badge-setting-badge-setting-module"
-	],
-	"../tab-call/tab-call.module": [
-		"./src/app/tab-call/tab-call.module.ts",
-		"tab-call-tab-call-module"
-	],
-	"../tab-chat/tab-chat.module": [
-		"./src/app/tab-chat/tab-chat.module.ts",
-		"tab-chat-tab-chat-module"
-	],
-	"../tab-status/tab-status.module": [
-		"./src/app/tab-status/tab-status.module.ts",
-		"tab-status-tab-status-module"
-	],
-	"./actionsheet-icon/actionsheet-icon.module": [
-		"./src/app/actionsheet-icon/actionsheet-icon.module.ts",
-		"actionsheet-icon-actionsheet-icon-module"
-	],
 	"./actionsheet-simple/actionsheet-simple.module": [
 		"./src/app/actionsheet-simple/actionsheet-simple.module.ts",
 		"actionsheet-simple-actionsheet-simple-module"
-	],
-	"./alert-basic/alert-basic.module": [
-		"./src/app/alert-basic/alert-basic.module.ts",
-		"alert-basic-alert-basic-module"
-	],
-	"./alert-checkbox/alert-checkbox.module": [
-		"./src/app/alert-checkbox/alert-checkbox.module.ts",
-		"alert-checkbox-alert-checkbox-module"
-	],
-	"./alert-confirmation/alert-confirmation.module": [
-		"./src/app/alert-confirmation/alert-confirmation.module.ts",
-		"alert-confirmation-alert-confirmation-module"
-	],
-	"./alert-prompt/alert-prompt.module": [
-		"./src/app/alert-prompt/alert-prompt.module.ts",
-		"alert-prompt-alert-prompt-module"
-	],
-	"./alert-radio/alert-radio.module": [
-		"./src/app/alert-radio/alert-radio.module.ts",
-		"alert-radio-alert-radio-module"
-	],
-	"./badge-card/badge-card.module": [
-		"./src/app/badge-card/badge-card.module.ts",
-		"badge-card-badge-card-module"
-	],
-	"./badge-movie/badge-movie.module": [
-		"./src/app/badge-movie/badge-movie.module.ts",
-		"badge-movie-badge-movie-module"
-	],
-	"./badge-setting/badge-setting.module": [
-		"./src/app/badge-setting/badge-setting.module.ts",
-		"common",
-		"badge-setting-badge-setting-module"
-	],
-	"./badge-with-card/badge-with-card.module": [
-		"./src/app/badge-with-card/badge-with-card.module.ts",
-		"badge-with-card-badge-with-card-module"
-	],
-	"./badge-with-list/badge-with-list.module": [
-		"./src/app/badge-with-list/badge-with-list.module.ts",
-		"badge-with-list-badge-with-list-module"
-	],
-	"./badge-with-tab/badge-with-tab.module": [
-		"./src/app/badge-with-tab/badge-with-tab.module.ts",
-		"badge-with-tab-badge-with-tab-module"
-	],
-	"./button-basic-one/button-basic-one.module": [
-		"./src/app/button-basic-one/button-basic-one.module.ts",
-		"button-basic-one-button-basic-one-module"
-	],
-	"./button-basic-two/button-basic-two.module": [
-		"./src/app/button-basic-two/button-basic-two.module.ts",
-		"button-basic-two-button-basic-two-module"
-	],
-	"./button-expand/button-expand.module": [
-		"./src/app/button-expand/button-expand.module.ts",
-		"button-expand-button-expand-module"
-	],
-	"./button-outline/button-outline.module": [
-		"./src/app/button-outline/button-outline.module.ts",
-		"button-outline-button-outline-module"
 	],
 	"./button-text/button-text.module": [
 		"./src/app/button-text/button-text.module.ts",
 		"button-text-button-text-module"
 	],
-	"./button-transparent/button-transparent.module": [
-		"./src/app/button-transparent/button-transparent.module.ts",
-		"button-transparent-button-transparent-module"
-	],
-	"./card-dashboard/card-dashboard.module": [
-		"./src/app/card-dashboard/card-dashboard.module.ts",
-		"card-dashboard-card-dashboard-module"
-	],
-	"./card-images/card-images.module": [
-		"./src/app/card-images/card-images.module.ts",
-		"card-images-card-images-module"
-	],
-	"./card-list-avatar/card-list-avatar.module": [
-		"./src/app/card-list-avatar/card-list-avatar.module.ts",
-		"card-list-avatar-card-list-avatar-module"
-	],
-	"./card-list-simple/card-list-simple.module": [
-		"./src/app/card-list-simple/card-list-simple.module.ts",
-		"card-list-simple-card-list-simple-module"
-	],
-	"./card-shoping-simple/card-shoping-simple.module": [
-		"./src/app/card-shoping-simple/card-shoping-simple.module.ts",
-		"card-shoping-simple-card-shoping-simple-module"
-	],
-	"./card-shoping-slider/card-shoping-slider.module": [
-		"./src/app/card-shoping-slider/card-shoping-slider.module.ts",
-		"card-shoping-slider-card-shoping-slider-module"
-	],
 	"./card-timeline-theme-one/card-timeline-theme-one.module": [
 		"./src/app/card-timeline-theme-one/card-timeline-theme-one.module.ts",
 		"card-timeline-theme-one-card-timeline-theme-one-module"
 	],
-	"./card-timeline-theme-three/card-timeline-theme-three.module": [
-		"./src/app/card-timeline-theme-three/card-timeline-theme-three.module.ts",
-		"card-timeline-theme-three-card-timeline-theme-three-module"
-	],
-	"./card-timeline-theme-two/card-timeline-theme-two.module": [
-		"./src/app/card-timeline-theme-two/card-timeline-theme-two.module.ts",
-		"card-timeline-theme-two-card-timeline-theme-two-module"
-	],
-	"./checkbox-right-with-avatar/checkbox-right-with-avatar.module": [
-		"./src/app/checkbox-right-with-avatar/checkbox-right-with-avatar.module.ts",
-		"checkbox-right-with-avatar-checkbox-right-with-avatar-module"
-	],
-	"./checkbox-simple/checkbox-simple.module": [
-		"./src/app/checkbox-simple/checkbox-simple.module.ts",
-		"checkbox-simple-checkbox-simple-module"
-	],
-	"./checkbox-square/checkbox-square.module": [
-		"./src/app/checkbox-square/checkbox-square.module.ts",
-		"checkbox-square-checkbox-square-module"
-	],
-	"./checkbox-with-big-image/checkbox-with-big-image.module": [
-		"./src/app/checkbox-with-big-image/checkbox-with-big-image.module.ts",
-		"checkbox-with-big-image-checkbox-with-big-image-module"
-	],
-	"./component-details/component-details.module": [
-		"./src/app/component-details/component-details.module.ts",
-		"common",
-		"component-details-component-details-module"
-	],
-	"./fab-down-icon/fab-down-icon.module": [
-		"./src/app/fab-down-icon/fab-down-icon.module.ts",
-		"common",
-		"fab-down-icon-fab-down-icon-module"
-	],
-	"./fab-down-text/fab-down-text.module": [
-		"./src/app/fab-down-text/fab-down-text.module.ts",
-		"fab-down-text-fab-down-text-module"
-	],
-	"./fab-left-icon/fab-left-icon.module": [
-		"./src/app/fab-left-icon/fab-left-icon.module.ts",
-		"common",
-		"fab-left-icon-fab-left-icon-module"
-	],
-	"./fab-left-text/fab-left-text.module": [
-		"./src/app/fab-left-text/fab-left-text.module.ts",
-		"fab-left-text-fab-left-text-module"
-	],
-	"./fab-middle-icon/fab-middle-icon.module": [
-		"./src/app/fab-middle-icon/fab-middle-icon.module.ts",
-		"common",
-		"fab-middle-icon-fab-middle-icon-module"
-	],
-	"./fab-middle-text/fab-middle-text.module": [
-		"./src/app/fab-middle-text/fab-middle-text.module.ts",
-		"common",
-		"fab-middle-text-fab-middle-text-module"
-	],
-	"./fab-right-icon/fab-right-icon.module": [
-		"./src/app/fab-right-icon/fab-right-icon.module.ts",
-		"common",
-		"fab-right-icon-fab-right-icon-module"
-	],
-	"./fab-right-text/fab-right-text.module": [
-		"./src/app/fab-right-text/fab-right-text.module.ts",
-		"fab-right-text-fab-right-text-module"
-	],
-	"./fab-simple-icon/fab-simple-icon.module": [
-		"./src/app/fab-simple-icon/fab-simple-icon.module.ts",
-		"fab-simple-icon-fab-simple-icon-module"
-	],
-	"./fab-simple-text/fab-simple-text.module": [
-		"./src/app/fab-simple-text/fab-simple-text.module.ts",
-		"common",
-		"fab-simple-text-fab-simple-text-module"
-	],
-	"./fab-up-icon/fab-up-icon.module": [
-		"./src/app/fab-up-icon/fab-up-icon.module.ts",
-		"common",
-		"fab-up-icon-fab-up-icon-module"
-	],
-	"./fab-up-text/fab-up-text.module": [
-		"./src/app/fab-up-text/fab-up-text.module.ts",
-		"common",
-		"fab-up-text-fab-up-text-module"
-	],
-	"./form-forget-one/form-forget-one.module": [
-		"./src/app/form-forget-one/form-forget-one.module.ts",
-		"common",
-		"form-forget-one-form-forget-one-module"
-	],
-	"./form-forget-three/form-forget-three.module": [
-		"./src/app/form-forget-three/form-forget-three.module.ts",
-		"form-forget-three-form-forget-three-module"
-	],
-	"./form-forget-two/form-forget-two.module": [
-		"./src/app/form-forget-two/form-forget-two.module.ts",
-		"form-forget-two-form-forget-two-module"
-	],
-	"./form-login-one/form-login-one.module": [
-		"./src/app/form-login-one/form-login-one.module.ts",
-		"common",
-		"form-login-one-form-login-one-module"
-	],
-	"./form-login-three/form-login-three.module": [
-		"./src/app/form-login-three/form-login-three.module.ts",
-		"form-login-three-form-login-three-module"
-	],
-	"./form-login-two/form-login-two.module": [
-		"./src/app/form-login-two/form-login-two.module.ts",
-		"form-login-two-form-login-two-module"
-	],
-	"./form-register-one/form-register-one.module": [
-		"./src/app/form-register-one/form-register-one.module.ts",
-		"common",
-		"form-register-one-form-register-one-module"
-	],
-	"./form-register-three/form-register-three.module": [
-		"./src/app/form-register-three/form-register-three.module.ts",
-		"common",
-		"form-register-three-form-register-three-module"
-	],
-	"./form-register-two/form-register-two.module": [
-		"./src/app/form-register-two/form-register-two.module.ts",
-		"form-register-two-form-register-two-module"
-	],
-	"./grid-album/grid-album.module": [
-		"./src/app/grid-album/grid-album.module.ts",
-		"grid-album-grid-album-module"
-	],
-	"./grid-category/grid-category.module": [
-		"./src/app/grid-category/grid-category.module.ts",
-		"grid-category-grid-category-module"
-	],
-	"./grid-section/grid-section.module": [
-		"./src/app/grid-section/grid-section.module.ts",
-		"grid-section-grid-section-module"
-	],
-	"./grid-slider/grid-slider.module": [
-		"./src/app/grid-slider/grid-slider.module.ts",
-		"grid-slider-grid-slider-module"
-	],
-	"./grid-subcategory-two/grid-subcategory-two.module": [
-		"./src/app/grid-subcategory-two/grid-subcategory-two.module.ts",
-		"grid-subcategory-two-grid-subcategory-two-module"
-	],
-	"./grid-subcategory/grid-subcategory.module": [
-		"./src/app/grid-subcategory/grid-subcategory.module.ts",
-		"grid-subcategory-grid-subcategory-module"
-	],
-	"./grid-three-line/grid-three-line.module": [
-		"./src/app/grid-three-line/grid-three-line.module.ts",
-		"grid-three-line-grid-three-line-module"
-	],
-	"./grid-two-line/grid-two-line.module": [
-		"./src/app/grid-two-line/grid-two-line.module.ts",
-		"common",
-		"grid-two-line-grid-two-line-module"
-	],
-	"./grid-with-header/grid-with-header.module": [
-		"./src/app/grid-with-header/grid-with-header.module.ts",
-		"grid-with-header-grid-with-header-module"
-	],
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
-		"common",
 		"home-home-module"
-	],
-	"./intro/intro.module": [
-		"./src/app/intro/intro.module.ts",
-		"intro-intro-module"
-	],
-	"./list-expandable/list-expandable.module": [
-		"./src/app/list-expandable/list-expandable.module.ts",
-		"common",
-		"list-expandable-list-expandable-module"
-	],
-	"./list-fade-in/list-fade-in.module": [
-		"./src/app/list-fade-in/list-fade-in.module.ts",
-		"list-fade-in-list-fade-in-module"
 	],
 	"./list-infinte-scroll/list-infinte-scroll.module": [
 		"./src/app/list-infinte-scroll/list-infinte-scroll.module.ts",
 		"list-infinte-scroll-list-infinte-scroll-module"
-	],
-	"./list-refresher/list-refresher.module": [
-		"./src/app/list-refresher/list-refresher.module.ts",
-		"list-refresher-list-refresher-module"
-	],
-	"./list-reorder/list-reorder.module": [
-		"./src/app/list-reorder/list-reorder.module.ts",
-		"list-reorder-list-reorder-module"
-	],
-	"./list-slide-left/list-slide-left.module": [
-		"./src/app/list-slide-left/list-slide-left.module.ts",
-		"list-slide-left-list-slide-left-module"
-	],
-	"./list-slide-right/list-slide-right.module": [
-		"./src/app/list-slide-right/list-slide-right.module.ts",
-		"list-slide-right-list-slide-right-module"
-	],
-	"./list-swipe-full-image/list-swipe-full-image.module": [
-		"./src/app/list-swipe-full-image/list-swipe-full-image.module.ts",
-		"common",
-		"list-swipe-full-image-list-swipe-full-image-module"
-	],
-	"./list-swipe-left-to-right/list-swipe-left-to-right.module": [
-		"./src/app/list-swipe-left-to-right/list-swipe-left-to-right.module.ts",
-		"common",
-		"list-swipe-left-to-right-list-swipe-left-to-right-module"
-	],
-	"./list-swipe-right-to-left/list-swipe-right-to-left.module": [
-		"./src/app/list-swipe-right-to-left/list-swipe-right-to-left.module.ts",
-		"common",
-		"list-swipe-right-to-left-list-swipe-right-to-left-module"
-	],
-	"./list-swipe-thumbnail-products/list-swipe-thumbnail-products.module": [
-		"./src/app/list-swipe-thumbnail-products/list-swipe-thumbnail-products.module.ts",
-		"common",
-		"list-swipe-thumbnail-products-list-swipe-thumbnail-products-module"
-	],
-	"./list-swipe-with-header/list-swipe-with-header.module": [
-		"./src/app/list-swipe-with-header/list-swipe-with-header.module.ts",
-		"common",
-		"list-swipe-with-header-list-swipe-with-header-module"
-	],
-	"./list/list.module": [
-		"./src/app/list/list.module.ts",
-		"list-list-module"
-	],
-	"./parallax-header-image/parallax-header-image.module": [
-		"./src/app/parallax-header-image/parallax-header-image.module.ts",
-		"parallax-header-image-parallax-header-image-module"
-	],
-	"./radio-circle-with-avatar/radio-circle-with-avatar.module": [
-		"./src/app/radio-circle-with-avatar/radio-circle-with-avatar.module.ts",
-		"radio-circle-with-avatar-radio-circle-with-avatar-module"
-	],
-	"./radio-simple-left/radio-simple-left.module": [
-		"./src/app/radio-simple-left/radio-simple-left.module.ts",
-		"radio-simple-left-radio-simple-left-module"
-	],
-	"./radio-simple-right/radio-simple-right.module": [
-		"./src/app/radio-simple-right/radio-simple-right.module.ts",
-		"radio-simple-right-radio-simple-right-module"
-	],
-	"./radio-square-with-big-image/radio-square-with-big-image.module": [
-		"./src/app/radio-square-with-big-image/radio-square-with-big-image.module.ts",
-		"radio-square-with-big-image-radio-square-with-big-image-module"
-	],
-	"./searchbar-simple/searchbar-simple.module": [
-		"./src/app/searchbar-simple/searchbar-simple.module.ts",
-		"searchbar-simple-searchbar-simple-module"
-	],
-	"./searchbar-with-images/searchbar-with-images.module": [
-		"./src/app/searchbar-with-images/searchbar-with-images.module.ts",
-		"searchbar-with-images-searchbar-with-images-module"
-	],
-	"./segment-footer-icon/segment-footer-icon.module": [
-		"./src/app/segment-footer-icon/segment-footer-icon.module.ts",
-		"segment-footer-icon-segment-footer-icon-module"
-	],
-	"./segment-footer-text-icon/segment-footer-text-icon.module": [
-		"./src/app/segment-footer-text-icon/segment-footer-text-icon.module.ts",
-		"segment-footer-text-icon-segment-footer-text-icon-module"
-	],
-	"./segment-footer-text/segment-footer-text.module": [
-		"./src/app/segment-footer-text/segment-footer-text.module.ts",
-		"segment-footer-text-segment-footer-text-module"
-	],
-	"./segment-header-icon/segment-header-icon.module": [
-		"./src/app/segment-header-icon/segment-header-icon.module.ts",
-		"segment-header-icon-segment-header-icon-module"
-	],
-	"./segment-header-text/segment-header-text.module": [
-		"./src/app/segment-header-text/segment-header-text.module.ts",
-		"segment-header-text-segment-header-text-module"
-	],
-	"./segment-scrollable-header-icon/segment-scrollable-header-icon.module": [
-		"./src/app/segment-scrollable-header-icon/segment-scrollable-header-icon.module.ts",
-		"segment-scrollable-header-icon-segment-scrollable-header-icon-module"
-	],
-	"./segment-scrollable-header-text/segment-scrollable-header-text.module": [
-		"./src/app/segment-scrollable-header-text/segment-scrollable-header-text.module.ts",
-		"segment-scrollable-header-text-segment-scrollable-header-text-module"
-	],
-	"./slider-arrows/slider-arrows.module": [
-		"./src/app/slider-arrows/slider-arrows.module.ts",
-		"slider-arrows-slider-arrows-module"
-	],
-	"./slider-autoplay/slider-autoplay.module": [
-		"./src/app/slider-autoplay/slider-autoplay.module.ts",
-		"slider-autoplay-slider-autoplay-module"
-	],
-	"./slider-images/slider-images.module": [
-		"./src/app/slider-images/slider-images.module.ts",
-		"slider-images-slider-images-module"
-	],
-	"./slider-simple/slider-simple.module": [
-		"./src/app/slider-simple/slider-simple.module.ts",
-		"slider-simple-slider-simple-module"
-	],
-	"./tab-call/tab-call.module": [
-		"./src/app/tab-call/tab-call.module.ts",
-		"tab-call-tab-call-module"
-	],
-	"./tab-chat/tab-chat.module": [
-		"./src/app/tab-chat/tab-chat.module.ts",
-		"tab-chat-tab-chat-module"
-	],
-	"./tab-footer-icon/tab-footer-icon.module": [
-		"./src/app/tab-footer-icon/tab-footer-icon.module.ts",
-		"tab-footer-icon-tab-footer-icon-module"
-	],
-	"./tab-footer-text-icon-badge/tab-footer-text-icon-badge.module": [
-		"./src/app/tab-footer-text-icon-badge/tab-footer-text-icon-badge.module.ts",
-		"tab-footer-text-icon-badge-tab-footer-text-icon-badge-module"
-	],
-	"./tab-footer-text-icon/tab-footer-text-icon.module": [
-		"./src/app/tab-footer-text-icon/tab-footer-text-icon.module.ts",
-		"tab-footer-text-icon-tab-footer-text-icon-module"
-	],
-	"./tab-footer-text/tab-footer-text.module": [
-		"./src/app/tab-footer-text/tab-footer-text.module.ts",
-		"tab-footer-text-tab-footer-text-module"
-	],
-	"./tab-header-icon/tab-header-icon.module": [
-		"./src/app/tab-header-icon/tab-header-icon.module.ts",
-		"tab-header-icon-tab-header-icon-module"
-	],
-	"./tab-header-text-icon-badge/tab-header-text-icon-badge.module": [
-		"./src/app/tab-header-text-icon-badge/tab-header-text-icon-badge.module.ts",
-		"tab-header-text-icon-badge-tab-header-text-icon-badge-module"
-	],
-	"./tab-header-text-icon/tab-header-text-icon.module": [
-		"./src/app/tab-header-text-icon/tab-header-text-icon.module.ts",
-		"tab-header-text-icon-tab-header-text-icon-module"
-	],
-	"./tab-header-text/tab-header-text.module": [
-		"./src/app/tab-header-text/tab-header-text.module.ts",
-		"tab-header-text-tab-header-text-module"
-	],
-	"./tab-status/tab-status.module": [
-		"./src/app/tab-status/tab-status.module.ts",
-		"tab-status-tab-status-module"
-	],
-	"./toast-bottom/toast-bottom.module": [
-		"./src/app/toast-bottom/toast-bottom.module.ts",
-		"toast-bottom-toast-bottom-module"
-	],
-	"./toast-middle/toast-middle.module": [
-		"./src/app/toast-middle/toast-middle.module.ts",
-		"toast-middle-toast-middle-module"
-	],
-	"./toast-top/toast-top.module": [
-		"./src/app/toast-top/toast-top.module.ts",
-		"toast-top-toast-top-module"
-	],
-	"./toggle-simple-left/toggle-simple-left.module": [
-		"./src/app/toggle-simple-left/toggle-simple-left.module.ts",
-		"toggle-simple-left-toggle-simple-left-module"
-	],
-	"./toggle-with-avatar/toggle-with-avatar.module": [
-		"./src/app/toggle-with-avatar/toggle-with-avatar.module.ts",
-		"toggle-with-avatar-toggle-with-avatar-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -1338,7 +863,7 @@ function webpackAsyncContext(req) {
 			throw e;
 		});
 	}
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+	return __webpack_require__.e(ids[1]).then(function() {
 		var id = ids[0];
 		return __webpack_require__(id);
 	});
@@ -1370,127 +895,17 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        redirectTo: 'intro',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
     {
         path: 'home',
         loadChildren: './home/home.module#HomePageModule'
     },
-    {
-        path: 'list',
-        loadChildren: './list/list.module#ListPageModule'
-    },
     { path: 'index/:cat_id', loadChildren: './list-infinte-scroll/list-infinte-scroll.module#ListInfinteScrollPageModule' },
     { path: 'article/:index_id', loadChildren: './actionsheet-simple/actionsheet-simple.module#ActionsheetSimplePageModule' },
     { path: 'latest', loadChildren: './card-timeline-theme-one/card-timeline-theme-one.module#CardTimelineThemeOnePageModule' },
-    { path: 'privacy-policy', loadChildren: './button-text/button-text.module#ButtonTextPageModule' },
-    { path: 'list-refresher', loadChildren: './list-refresher/list-refresher.module#ListRefresherPageModule' },
-    { path: 'list-slide-left', loadChildren: './list-slide-left/list-slide-left.module#ListSlideLeftPageModule' },
-    { path: 'list-slide-right', loadChildren: './list-slide-right/list-slide-right.module#ListSlideRightPageModule' },
-    { path: 'list-fade-in', loadChildren: './list-fade-in/list-fade-in.module#ListFadeInPageModule' },
-    { path: 'list-swipe-thumbnail-products', loadChildren: './list-swipe-thumbnail-products/list-swipe-thumbnail-products.module#ListSwipeThumbnailProductsPageModule' },
-    { path: 'list-swipe-full-image', loadChildren: './list-swipe-full-image/list-swipe-full-image.module#ListSwipeFullImagePageModule' },
-    { path: 'list-swipe-with-header', loadChildren: './list-swipe-with-header/list-swipe-with-header.module#ListSwipeWithHeaderPageModule' },
-    { path: 'list-swipe-left-to-right', loadChildren: './list-swipe-left-to-right/list-swipe-left-to-right.module#ListSwipeLeftToRightPageModule' },
-    { path: 'list-swipe-right-to-left', loadChildren: './list-swipe-right-to-left/list-swipe-right-to-left.module#ListSwipeRightToLeftPageModule' },
-    { path: 'list-reorder', loadChildren: './list-reorder/list-reorder.module#ListReorderPageModule' },
-    { path: 'list-expandable', loadChildren: './list-expandable/list-expandable.module#ListExpandablePageModule' },
-    { path: 'grid-two-line', loadChildren: './grid-two-line/grid-two-line.module#GridTwoLinePageModule' },
-    { path: 'grid-three-line', loadChildren: './grid-three-line/grid-three-line.module#GridThreeLinePageModule' },
-    { path: 'grid-category', loadChildren: './grid-category/grid-category.module#GridCategoryPageModule' },
-    { path: 'grid-subcategory', loadChildren: './grid-subcategory/grid-subcategory.module#GridSubcategoryPageModule' },
-    { path: 'grid-album', loadChildren: './grid-album/grid-album.module#GridAlbumPageModule' },
-    { path: 'grid-section', loadChildren: './grid-section/grid-section.module#GridSectionPageModule' },
-    { path: 'grid-with-header', loadChildren: './grid-with-header/grid-with-header.module#GridWithHeaderPageModule' },
-    { path: 'card-dashboard', loadChildren: './card-dashboard/card-dashboard.module#CardDashboardPageModule' },
-    { path: 'card-list-simple', loadChildren: './card-list-simple/card-list-simple.module#CardListSimplePageModule' },
-    { path: 'card-list-avatar', loadChildren: './card-list-avatar/card-list-avatar.module#CardListAvatarPageModule' },
-    { path: 'card-shoping-simple', loadChildren: './card-shoping-simple/card-shoping-simple.module#CardShopingSimplePageModule' },
-    { path: 'card-shoping-slider', loadChildren: './card-shoping-slider/card-shoping-slider.module#CardShopingSliderPageModule' },
-    { path: 'card-timeline-theme-two', loadChildren: './card-timeline-theme-two/card-timeline-theme-two.module#CardTimelineThemeTwoPageModule' },
-    { path: 'card-timeline-theme-three', loadChildren: './card-timeline-theme-three/card-timeline-theme-three.module#CardTimelineThemeThreePageModule' },
-    { path: 'card-images', loadChildren: './card-images/card-images.module#CardImagesPageModule' },
-    { path: 'slider-simple', loadChildren: './slider-simple/slider-simple.module#SliderSimplePageModule' },
-    { path: 'slider-images', loadChildren: './slider-images/slider-images.module#SliderImagesPageModule' },
-    { path: 'slider-autoplay', loadChildren: './slider-autoplay/slider-autoplay.module#SliderAutoplayPageModule' },
-    { path: 'slider-arrows', loadChildren: './slider-arrows/slider-arrows.module#SliderArrowsPageModule' },
-    { path: 'tab-footer-text', loadChildren: './tab-footer-text/tab-footer-text.module#TabFooterTextPageModule' },
-    { path: 'tab-footer-icon', loadChildren: './tab-footer-icon/tab-footer-icon.module#TabFooterIconPageModule' },
-    { path: 'tab-footer-text-icon', loadChildren: './tab-footer-text-icon/tab-footer-text-icon.module#TabFooterTextIconPageModule' },
-    { path: 'tab-footer-text-icon-badge', loadChildren: './tab-footer-text-icon-badge/tab-footer-text-icon-badge.module#TabFooterTextIconBadgePageModule' },
-    { path: 'tab-header-text', loadChildren: './tab-header-text/tab-header-text.module#TabHeaderTextPageModule' },
-    { path: 'tab-header-icon', loadChildren: './tab-header-icon/tab-header-icon.module#TabHeaderIconPageModule' },
-    { path: 'tab-header-text-icon', loadChildren: './tab-header-text-icon/tab-header-text-icon.module#TabHeaderTextIconPageModule' },
-    { path: 'tab-header-text-icon-badge', loadChildren: './tab-header-text-icon-badge/tab-header-text-icon-badge.module#TabHeaderTextIconBadgePageModule' },
-    { path: 'segment-header-text', loadChildren: './segment-header-text/segment-header-text.module#SegmentHeaderTextPageModule' },
-    { path: 'segment-header-icon', loadChildren: './segment-header-icon/segment-header-icon.module#SegmentHeaderIconPageModule' },
-    { path: 'segment-scrollable-header-text', loadChildren: './segment-scrollable-header-text/segment-scrollable-header-text.module#SegmentScrollableHeaderTextPageModule' },
-    { path: 'segment-scrollable-header-icon', loadChildren: './segment-scrollable-header-icon/segment-scrollable-header-icon.module#SegmentScrollableHeaderIconPageModule' },
-    { path: 'segment-footer-text', loadChildren: './segment-footer-text/segment-footer-text.module#SegmentFooterTextPageModule' },
-    { path: 'segment-footer-icon', loadChildren: './segment-footer-icon/segment-footer-icon.module#SegmentFooterIconPageModule' },
-    { path: 'segment-footer-text-icon', loadChildren: './segment-footer-text-icon/segment-footer-text-icon.module#SegmentFooterTextIconPageModule' },
-    { path: 'button-basic-one', loadChildren: './button-basic-one/button-basic-one.module#ButtonBasicOnePageModule' },
-    { path: 'button-basic-two', loadChildren: './button-basic-two/button-basic-two.module#ButtonBasicTwoPageModule' },
-    { path: 'button-outline', loadChildren: './button-outline/button-outline.module#ButtonOutlinePageModule' },
-    { path: 'button-transparent', loadChildren: './button-transparent/button-transparent.module#ButtonTransparentPageModule' },
-    { path: 'button-expand', loadChildren: './button-expand/button-expand.module#ButtonExpandPageModule' },
-    { path: 'radio-simple-left', loadChildren: './radio-simple-left/radio-simple-left.module#RadioSimpleLeftPageModule' },
-    { path: 'radio-simple-right', loadChildren: './radio-simple-right/radio-simple-right.module#RadioSimpleRightPageModule' },
-    { path: 'radio-circle-with-avatar', loadChildren: './radio-circle-with-avatar/radio-circle-with-avatar.module#RadioCircleWithAvatarPageModule' },
-    { path: 'radio-square-with-big-image', loadChildren: './radio-square-with-big-image/radio-square-with-big-image.module#RadioSquareWithBigImagePageModule' },
-    { path: 'checkbox-simple', loadChildren: './checkbox-simple/checkbox-simple.module#CheckboxSimplePageModule' },
-    { path: 'checkbox-square', loadChildren: './checkbox-square/checkbox-square.module#CheckboxSquarePageModule' },
-    { path: 'checkbox-right-with-avatar', loadChildren: './checkbox-right-with-avatar/checkbox-right-with-avatar.module#CheckboxRightWithAvatarPageModule' },
-    { path: 'checkbox-with-big-image', loadChildren: './checkbox-with-big-image/checkbox-with-big-image.module#CheckboxWithBigImagePageModule' },
-    { path: 'badge-with-card', loadChildren: './badge-with-card/badge-with-card.module#BadgeWithCardPageModule' },
-    { path: 'badge-with-tab', loadChildren: './badge-with-tab/badge-with-tab.module#BadgeWithTabPageModule' },
-    { path: 'badge-with-list', loadChildren: './badge-with-list/badge-with-list.module#BadgeWithListPageModule' },
-    { path: 'toggle-with-avatar', loadChildren: './toggle-with-avatar/toggle-with-avatar.module#ToggleWithAvatarPageModule' },
-    { path: 'toggle-simple-left', loadChildren: './toggle-simple-left/toggle-simple-left.module#ToggleSimpleLeftPageModule' },
-    { path: 'searchbar-simple', loadChildren: './searchbar-simple/searchbar-simple.module#SearchbarSimplePageModule' },
-    { path: 'searchbar-with-images', loadChildren: './searchbar-with-images/searchbar-with-images.module#SearchbarWithImagesPageModule' },
-    { path: 'fab-simple-text', loadChildren: './fab-simple-text/fab-simple-text.module#FabSimpleTextPageModule' },
-    { path: 'fab-simple-icon', loadChildren: './fab-simple-icon/fab-simple-icon.module#FabSimpleIconPageModule' },
-    { path: 'fab-up-text', loadChildren: './fab-up-text/fab-up-text.module#FabUpTextPageModule' },
-    { path: 'fab-up-icon', loadChildren: './fab-up-icon/fab-up-icon.module#FabUpIconPageModule' },
-    { path: 'fab-down-text', loadChildren: './fab-down-text/fab-down-text.module#FabDownTextPageModule' },
-    { path: 'fab-down-icon', loadChildren: './fab-down-icon/fab-down-icon.module#FabDownIconPageModule' },
-    { path: 'fab-left-text', loadChildren: './fab-left-text/fab-left-text.module#FabLeftTextPageModule' },
-    { path: 'fab-left-icon', loadChildren: './fab-left-icon/fab-left-icon.module#FabLeftIconPageModule' },
-    { path: 'fab-right-text', loadChildren: './fab-right-text/fab-right-text.module#FabRightTextPageModule' },
-    { path: 'fab-right-icon', loadChildren: './fab-right-icon/fab-right-icon.module#FabRightIconPageModule' },
-    { path: 'fab-middle-text', loadChildren: './fab-middle-text/fab-middle-text.module#FabMiddleTextPageModule' },
-    { path: 'fab-middle-icon', loadChildren: './fab-middle-icon/fab-middle-icon.module#FabMiddleIconPageModule' },
-    { path: 'alert-basic', loadChildren: './alert-basic/alert-basic.module#AlertBasicPageModule' },
-    { path: 'alert-confirmation', loadChildren: './alert-confirmation/alert-confirmation.module#AlertConfirmationPageModule' },
-    { path: 'alert-prompt', loadChildren: './alert-prompt/alert-prompt.module#AlertPromptPageModule' },
-    { path: 'alert-radio', loadChildren: './alert-radio/alert-radio.module#AlertRadioPageModule' },
-    { path: 'alert-checkbox', loadChildren: './alert-checkbox/alert-checkbox.module#AlertCheckboxPageModule' },
-    { path: 'toast-bottom', loadChildren: './toast-bottom/toast-bottom.module#ToastBottomPageModule' },
-    { path: 'toast-middle', loadChildren: './toast-middle/toast-middle.module#ToastMiddlePageModule' },
-    { path: 'toast-top', loadChildren: './toast-top/toast-top.module#ToastTopPageModule' },
-    { path: 'actionsheet-icon', loadChildren: './actionsheet-icon/actionsheet-icon.module#ActionsheetIconPageModule' },
-    { path: 'parallax-header-image', loadChildren: './parallax-header-image/parallax-header-image.module#ParallaxHeaderImagePageModule' },
-    { path: 'form-login-one', loadChildren: './form-login-one/form-login-one.module#FormLoginOnePageModule' },
-    { path: 'form-login-two', loadChildren: './form-login-two/form-login-two.module#FormLoginTwoPageModule' },
-    { path: 'form-login-three', loadChildren: './form-login-three/form-login-three.module#FormLoginThreePageModule' },
-    { path: 'form-register-one', loadChildren: './form-register-one/form-register-one.module#FormRegisterOnePageModule' },
-    { path: 'form-register-two', loadChildren: './form-register-two/form-register-two.module#FormRegisterTwoPageModule' },
-    { path: 'form-register-three', loadChildren: './form-register-three/form-register-three.module#FormRegisterThreePageModule' },
-    { path: 'grid-slider', loadChildren: './grid-slider/grid-slider.module#GridSliderPageModule' },
-    { path: 'grid-subcategory-two', loadChildren: './grid-subcategory-two/grid-subcategory-two.module#GridSubcategoryTwoPageModule' },
-    { path: 'tab-chat', loadChildren: './tab-chat/tab-chat.module#TabChatPageModule' },
-    { path: 'tab-status', loadChildren: './tab-status/tab-status.module#TabStatusPageModule' },
-    { path: 'tab-call', loadChildren: './tab-call/tab-call.module#TabCallPageModule' },
-    { path: 'badge-movie', loadChildren: './badge-movie/badge-movie.module#BadgeMoviePageModule' },
-    { path: 'badge-card', loadChildren: './badge-card/badge-card.module#BadgeCardPageModule' },
-    { path: 'badge-setting', loadChildren: './badge-setting/badge-setting.module#BadgeSettingPageModule' },
-    { path: 'component-details', loadChildren: './component-details/component-details.module#ComponentDetailsPageModule' },
-    { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
-    { path: 'form-forget-one', loadChildren: './form-forget-one/form-forget-one.module#FormForgetOnePageModule' },
-    { path: 'form-forget-two', loadChildren: './form-forget-two/form-forget-two.module#FormForgetTwoPageModule' },
-    { path: 'form-forget-three', loadChildren: './form-forget-three/form-forget-three.module#FormForgetThreePageModule' }
+    { path: 'privacy-policy', loadChildren: './button-text/button-text.module#ButtonTextPageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1517,7 +932,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content class=\"contaentClass\">\n        <ion-list class=\"listClass\">\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\n              <span>\n                <div class=\"logoDiv\">\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\n                </div>\n                <div class=\"textDiv\">\n                  <h3>Pyschology - Article Pocket App</h3>\n                </div>\n              </span>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item class=\"mainComponent\" lines=\"full\">\n              <div class=\"divPara\">\n                <p class=\"textParaComponents\">\n                  <b>{{p.title}}</b>\n                </p>\n              </div>\n            </ion-item>\n          </ion-menu-toggle>\n          <div *ngIf=\"articlesCount != '0'; else noArticleBlock\">\n            <ion-item no-padding lines=\"full\" (click)=\"expandItemList(item)\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </div>\n          <ng-template #noArticleBlock>\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </ng-template>\n           <ion-item lines=\"full\" (click)=\"expandItemBadge(item)\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    My Bookmarks\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge class=\"buttonList\">{{bookmarkCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          <ion-item lines=\"full\" (click)=\"expandItemCard(item)\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Recently Viewed\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge class=\"buttonList\">9</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"expandItemGrid(item)\" *ngFor=\"let item of itemsGrid\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Share This App\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item (click)=\"expandItemTab(item)\" lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Rate\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Privacy Policy\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu side=\"start\" menu-id=\"Menu1\">\n      <ion-header>\n        <ion-toolbar>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n      <ion-content class=\"contaentClass\">\n        <ion-list class=\"listClass\">\n          <ion-menu-toggle auto-hide=\"false\">\n            <ion-item style='--background:var(--my-var)' class=\"itemIcon\" no-padding>\n              <span>\n                <div class=\"logoDiv\">\n                  <img src=\"assets/uiuxicon.png\" class=\"LogoImg\" />\n                </div>\n                <div class=\"textDiv\">\n                  <h3>Pyschology - Article Pocket App</h3>\n                </div>\n              </span>\n            </ion-item>\n          </ion-menu-toggle>\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item class=\"mainComponent\" lines=\"full\">\n              <div class=\"divPara\">\n                <p class=\"textParaComponents\">\n                  <b>{{p.title}}</b>\n                </p>\n              </div>\n            </ion-item>\n          </ion-menu-toggle>\n          <div *ngIf=\"articlesCount != 0; else noArticleBlock\">\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\" (click)=\"goToList()\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </div>\n          <ng-template #noArticleBlock>\n            <ion-item no-padding lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsList\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"paper\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Latest Articles\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  <div class=\"div-badge\">\n                    <ion-badge fill=\"outline\" class=\"buttonList\">{{articlesCount}}</ion-badge>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          </ng-template>\n           <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsBadge\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"bookmark\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    My Bookmarks\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n               <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsCard\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"timer\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Recently Viewed\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                    <small>Coming soon</small>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" (click)=\"share()\" *ngFor=\"let item of itemsGrid\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"share\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Share This App\n                  </p>\n                </ion-col>\n\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item lines=\"full\" class=\"listItem\" *ngFor=\"let item of itemsTab\" no-padding>\n            <ion-grid class=\"listGrid\" no-padding>\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"star\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Rate\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n          <ion-item no-padding lines=\"full\" routerLink=\"/privacy-policy\" routerDirection=\"forward\" class=\"listItem\" *ngFor=\"let item of itemsSegment\">\n            <ion-grid no-padding class=\"listGrid\">\n              <ion-row>\n                <ion-col size=\"2\">\n                  <ion-icon [ngStyle]=\"{'color':itemColor}\" class=\"listIcon\" name=\"information-circle\"></ion-icon>\n                </ion-col>\n                <ion-col size=\"8\" class=\"allColPos\">\n                  <p class=\"textPara\">\n                    Privacy Policy\n                  </p>\n                </ion-col>\n                <ion-col size=\"2\">\n                  \n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -1534,10 +949,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/ngx/index.js");
+
 
 
 
@@ -1548,10 +965,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     // constructor
-    function AppComponent(platform, splashScreen, statusBar, menuCtrl, modalCntrl, nav, navCtrl, events, statusbar, elementRef, articleService, storage) {
+    function AppComponent(platform, statusBar, menuCtrl, modalCntrl, nav, navCtrl, events, statusbar, elementRef, articleService, storage, socialSharing, oneSignal, alertCtrl) {
         var _this = this;
         this.platform = platform;
-        this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.menuCtrl = menuCtrl;
         this.modalCntrl = modalCntrl;
@@ -1562,6 +978,9 @@ var AppComponent = /** @class */ (function () {
         this.elementRef = elementRef;
         this.articleService = articleService;
         this.storage = storage;
+        this.socialSharing = socialSharing;
+        this.oneSignal = oneSignal;
+        this.alertCtrl = alertCtrl;
         this.bookmarkCount = 0;
         this.articlesCount = 0;
         this.iconColorVar = "";
@@ -1623,133 +1042,6 @@ var AppComponent = /** @class */ (function () {
         this.itemsForm = [];
         ///////
         this.listView = [];
-        /////////
-        this.grid = [];
-        //////
-        this.card = [
-            { name: "Dashboard" },
-            { name: "Simple List" },
-            { name: "Avatar List" },
-            { name: "Shopping Cart" },
-            { name: "Shopping Cart Slider" },
-            { name: "Timeline Theme 1" },
-            { name: "Timeline Theme 2" },
-            { name: "Timeline Theme 3" },
-            { name: "Images" },
-        ];
-        ///////////
-        this.slider = [
-            { name: "Simple Slider" },
-            { name: "Images Slider" },
-            { name: "Autoplay Slider" },
-            { name: "Arrows Slider" },
-        ];
-        ////////
-        this.tabs = [
-            { name: "Footer Text" },
-            { name: "Footer Icons" },
-            { name: "Footer Text Icons" },
-            { name: "Footer Text Icons Badges" },
-            { name: "Header Text" },
-            { name: "Header Icons" },
-            { name: "Header Text Icons" },
-            { name: "Header Text Icons Badges" },
-        ];
-        ////////
-        this.segment = [
-            { name: "Header Text" },
-            { name: "Header Icons" },
-            { name: "Scrollable Header Text" },
-            { name: "Scrollable Header Icons" },
-            { name: "Footer Text" },
-            { name: "Footer Icons" },
-            { name: "Footer Text Icons" },
-        ];
-        ////////
-        this.button = [
-            { name: "Basic Style 1" },
-            { name: "Basic Style 2" },
-            { name: "Text" },
-            { name: "Outline" },
-            { name: "Transparent" },
-            { name: "Expand" },
-        ];
-        ////////
-        this.radio = [
-            { name: "Simple Left" },
-            { name: "Simple Right" },
-            { name: "Radio Avatar" },
-            { name: "Radio Thumbnail" },
-        ];
-        ////////
-        this.checkbox = [
-            { name: "Avatar With Square" },
-            { name: "Square Icon" },
-            { name: "Avatar With Circle" },
-            { name: "Big images" },
-        ];
-        ////////
-        this.badge = [
-            { name: "Card" },
-            { name: "Tabs" },
-            { name: "List" },
-        ];
-        ////////
-        this.toggle = [
-            { name: "Avatar" },
-            { name: "Simple left Side" },
-        ];
-        ////////
-        this.searchbar = [
-            { name: "Simple" },
-            { name: "Images" },
-        ];
-        ////////
-        this.fab = [
-            { name: "Simple Text" },
-            { name: "Simple Icon" },
-            { name: "Up Text" },
-            { name: "Up Icon" },
-            { name: "Down Text" },
-            { name: "Down Icon" },
-            { name: "Left Text" },
-            { name: "Left Icon" },
-            { name: "Right Text" },
-            { name: "Right Icon" },
-            { name: "Middle Text" },
-            { name: "Middle Icon" },
-        ];
-        ////////
-        this.alert = [
-            { name: "Basic" },
-            { name: "Confirmation" },
-            { name: "Prompt" },
-            { name: "Radio" },
-            { name: "Checkbox" },
-        ];
-        ////////
-        this.toast = [
-            { name: "Bottom Toast" },
-            { name: "Middle Toast" },
-            { name: "Top Toast" },
-        ];
-        ////////
-        this.actionSheet = [
-            { name: "Simple Text" },
-            { name: "Icons" },
-        ];
-        //////////
-        this.form = [
-            { name: "Login Theme One" },
-            { name: "Login Theme Two" },
-            { name: "Login Theme Three" },
-            { name: "Register Theme One" },
-            { name: "Register Theme Two" },
-            { name: "Register Theme Three" },
-            { name: "Forget Theme One" },
-            { name: "Forget Theme Two" },
-            { name: "Forget Theme Three" },
-        ];
         //for status bar
         this.initializeApp();
         this.itemsHome = [
@@ -1859,598 +1151,10 @@ var AppComponent = /** @class */ (function () {
         });
     }
     ////////
-    AppComponent.prototype.goToGrid = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("grid-two-line");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("grid-three-line");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("grid-category");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("grid-subcategory");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("grid-album");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("grid-section");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("grid-with-header");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToCard = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("card-dashboard");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("card-list-simple");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("card-list-avatar");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("card-shoping-simple");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("card-shoping-slider");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("card-timeline-theme-one");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("card-timeline-theme-two");
-        }
-        if (i == 7) {
-            this.navCtrl.navigateForward("card-timeline-theme-three");
-        }
-        if (i == 8) {
-            this.navCtrl.navigateForward("card-images");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSlider = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("slider-simple");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("slider-images");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("slider-autoplay");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("slider-arrows");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToTabs = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("tab-footer-text");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("tab-footer-icon");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("tab-footer-text-icon");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("tab-footer-text-icon-badge");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("tab-header-text");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("tab-header-icon");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("tab-header-text-icon");
-        }
-        if (i == 7) {
-            this.navCtrl.navigateForward("tab-header-text-icon-badge");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSegment = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("segment-header-text");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("segment-header-icon");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("segment-scrollable-header-text");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("segment-scrollable-header-icon");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("segment-footer-text");
-        }
-        if (i == 5) {
-            this.navCtrl.navigateForward("segment-footer-icon");
-        }
-        if (i == 6) {
-            this.navCtrl.navigateForward("segment-footer-text-icon");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToButton = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("button-basic-one");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("button-basic-two");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("button-text");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("button-outline");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("button-transparent");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("button-expand");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToRadio = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("radio-simple-left");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("radio-simple-right");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("radio-circle-with-avatar");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("radio-square-with-big-image");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToCheckbox = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("checkbox-simple");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("checkbox-square");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("checkbox-right-with-avatar");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("checkbox-with-big-image");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToBadge = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("badge-with-card");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("badge-with-tab");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("badge-with-list");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToToggle = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("toggle-with-avatar");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("toggle-simple-left");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToSearchbar = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("searchbar-simple");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("searchbar-with-images");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToFab = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("fab-simple-text");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("fab-simple-icon");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("fab-up-text");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("fab-up-icon");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("fab-down-text");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("fab-down-icon");
-        }
-        else if (i == 6) {
-            this.navCtrl.navigateForward("fab-left-text");
-        }
-        else if (i == 7) {
-            this.navCtrl.navigateForward("fab-left-icon");
-        }
-        else if (i == 8) {
-            this.navCtrl.navigateForward("fab-right-text");
-        }
-        else if (i == 9) {
-            this.navCtrl.navigateForward("fab-right-icon");
-        }
-        else if (i == 10) {
-            this.navCtrl.navigateForward("fab-middle-text");
-        }
-        else if (i == 11) {
-            this.navCtrl.navigateForward("fab-middle-icon");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToAlert = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("alert-basic");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("alert-confirmation");
-        }
-        if (i == 2) {
-            this.navCtrl.navigateForward("alert-prompt");
-        }
-        if (i == 3) {
-            this.navCtrl.navigateForward("alert-radio");
-        }
-        if (i == 4) {
-            this.navCtrl.navigateForward("alert-checkbox");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToToast = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("toast-bottom");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("toast-middle");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("toast-top");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToActionSheet = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("actionsheet-simple");
-        }
-        if (i == 1) {
-            this.navCtrl.navigateForward("actionsheet-icon");
-        }
-    };
-    ////////
     AppComponent.prototype.goToList = function () {
         this.menuCtrl.close();
         this.navCtrl.navigateForward("latest");
     };
-    /////
-    ////////////
-    AppComponent.prototype.expandItemList = function (item) {
-        this.visibleList = !this.visibleList;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsList.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ///
-    ////////////
-    AppComponent.prototype.expandItemGrid = function (item) {
-        this.visibleGrid = !this.visibleGrid;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsGrid.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemCard = function (item) {
-        this.visibleCard = !this.visibleCard;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsCard.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSlider = function (item) {
-        this.visibleSlider = !this.visibleSlider;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSlider.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemTab = function (item) {
-        this.visibleTab = !this.visibleTab;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsTab.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSegment = function (item) {
-        this.visibleSegment = !this.visibleSegment;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSegment.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemButton = function (item) {
-        this.visibleButton = !this.visibleButton;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsButton.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemRadio = function (item) {
-        this.visibleRadio = !this.visibleRadio;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsRadio.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemCheckbox = function (item) {
-        this.visibleCheckbox = !this.visibleCheckbox;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsCheckbox.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemBadge = function (item) {
-        this.visibleBadge = !this.visibleBadge;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsBadge.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemToggle = function (item) {
-        this.visibleToggle = !this.visibleToggle;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsToogle.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemSearchbar = function (item) {
-        this.visibleSearchbar = !this.visibleSearchbar;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsSearchbar.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemFAB = function (item) {
-        this.visibleFab = !this.visibleFab;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsFab.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemAlert = function (item) {
-        this.visibleAlert = !this.visibleAlert;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsAlert.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemToast = function (item) {
-        this.visibleToast = !this.visibleToast;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsToast.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemActionSheet = function (item) {
-        this.visibleActionsheet = !this.visibleActionsheet;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsActionsheet.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    ////////////
-    AppComponent.prototype.expandItemForm = function (item) {
-        this.visibleActionsheet = !this.visibleActionsheet;
-        if (item.expandedHelp) {
-            item.expandedHelp = false;
-        }
-        else {
-            this.itemsForm.map(function (listItem) {
-                if (item == listItem) {
-                    listItem.expanded = !listItem.expanded;
-                }
-                else {
-                    listItem.expanded = false;
-                }
-                return listItem;
-            });
-        }
-    };
-    /////
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.menuCtrl.enable(true, 'Menu1');
@@ -2464,7 +1168,56 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.initializeApp = function () {
         var _this = this;
         this.platform.ready().then(function () {
-            _this.statusBar.hide();
+            _this.statusBar.show();
+            if (_this.platform.is('cordova')) {
+                _this.setupPush();
+            }
+        });
+    };
+    AppComponent.prototype.setupPush = function () {
+        var _this = this;
+        // I recommend to put these into your environment.ts
+        this.oneSignal.startInit('37d89d56-4d35-4e95-81b5-8a64e274d1c5', '622987584855');
+        this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.None);
+        // Notifcation was received in general
+        this.oneSignal.handleNotificationReceived().subscribe(function (data) {
+            var msg = data.payload.body;
+            var title = data.payload.title;
+            var additionalData = data.payload.additionalData;
+            _this.showAlert(title, msg, additionalData.task);
+        });
+        // Notification was really clicked/opened
+        this.oneSignal.handleNotificationOpened().subscribe(function (data) {
+            // Just a note that the data is a different place here!
+            var additionalData = data.notification.payload.additionalData;
+            _this.showAlert('New Article Published', 'Go To Latest Article Section', additionalData.task);
+        });
+        this.oneSignal.endInit();
+    };
+    AppComponent.prototype.showAlert = function (title, msg, task) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var alert;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.alertCtrl.create({
+                            header: title,
+                            subHeader: msg,
+                            buttons: [
+                                {
+                                    text: "View",
+                                    handler: function () {
+                                        _this.menuCtrl.open();
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        alert = _a.sent();
+                        alert.present();
+                        return [2 /*return*/];
+                }
+            });
         });
     };
     AppComponent.prototype.initializeLatestArticle = function () {
@@ -2475,141 +1228,22 @@ var AppComponent = /** @class */ (function () {
             }
         });
     };
-    // For Expandable Function
-    AppComponent.prototype.expandItem = function (i, item) {
-        if (i == 0) {
-            this.visibleHome = !this.visibleHome;
-            if (item.expandedHome) {
-                item.expandedHome = false;
-            }
-            else {
-                this.itemsHome.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-        if (i == 1) {
-            this.visibleCategory = !this.visibleCategory;
-            if (item.expanded) {
-                item.expanded = false;
-            }
-            else {
-                this.itemsCategory.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-        if (i == 2) {
-            this.visibleShop = !this.visibleShop;
-            if (item.expanded) {
-                item.expanded = false;
-            }
-            else {
-                this.itemsShop.map(function (listItem) {
-                    if (item == listItem) {
-                        listItem.expanded = !listItem.expanded;
-                    }
-                    else {
-                        listItem.expanded = false;
-                    }
-                    return listItem;
-                });
-            }
-        }
-    };
-    //////////////////
-    AppComponent.prototype.homePage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("ehome");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("ehometwo");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("ehomethree");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("ehomefour");
-        }
-        else if (i == 4) {
-            this.nav.navigateForward("ehomefive");
-        }
-    };
-    AppComponent.prototype.categoryPage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("ecategory");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("ecategorytwo");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("ecategorythree");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("ecategoryfour");
-        }
-        else if (i == 4) {
-            this.nav.navigateForward("ecategoryfive");
-        }
-        else if (i == 5) {
-            this.nav.navigateForward("ecategorysix");
-        }
-    };
-    AppComponent.prototype.shopPage = function (i) {
-        if (i == 0) {
-            this.nav.navigateForward("eshopnewest");
-        }
-        else if (i == 1) {
-            this.nav.navigateForward("eshoptopseller");
-        }
-        else if (i == 2) {
-            this.nav.navigateForward("eshopdeals");
-        }
-        else if (i == 3) {
-            this.nav.navigateForward("eshopmostliked");
-        }
-    };
-    ////////
-    AppComponent.prototype.goToForm = function (i) {
-        if (i == 0) {
-            this.navCtrl.navigateForward("form-login-one");
-        }
-        else if (i == 1) {
-            this.navCtrl.navigateForward("form-login-two");
-        }
-        else if (i == 2) {
-            this.navCtrl.navigateForward("form-login-three");
-        }
-        else if (i == 3) {
-            this.navCtrl.navigateForward("form-register-one");
-        }
-        else if (i == 4) {
-            this.navCtrl.navigateForward("form-register-two");
-        }
-        else if (i == 5) {
-            this.navCtrl.navigateForward("form-register-three");
-        }
-        else if (i == 6) {
-            this.navCtrl.navigateForward("form-forget-one");
-        }
-        else if (i == 7) {
-            this.navCtrl.navigateForward("form-forget-two");
-        }
-        else if (i == 8) {
-            this.navCtrl.navigateForward("form-forget-three");
-        }
+    // Share Options
+    AppComponent.prototype.share = function () {
+        var _this = this;
+        this.platform.ready().then(function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.socialSharing.share('2KnowMySelf Psychology - The Article Pocket Book - Download at https://play.google.com/store/apps/details?id=com.ladla8602.knowmyself').then(function () {
+                        }).catch(function (err) {
+                            console.log(err);
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); });
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2618,17 +1252,19 @@ var AppComponent = /** @class */ (function () {
             styles: ["app.scss"]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
-            _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
-            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
+            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Events"],
-            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
+            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"],
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
-            _article_article_service__WEBPACK_IMPORTED_MODULE_6__["ArticleService"],
-            _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"]])
+            _article_article_service__WEBPACK_IMPORTED_MODULE_5__["ArticleService"],
+            _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"],
+            _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_6__["SocialSharing"],
+            _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_7__["OneSignal"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -2653,17 +1289,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
-/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./providers/recent_index */ "./src/app/providers/recent_index.ts");
-/* harmony import */ var _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/menu-component/menu-component.component */ "./src/app/components/menu-component/menu-component.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./providers/bookmark_index */ "./src/app/providers/bookmark_index.ts");
+/* harmony import */ var _providers_recent_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./providers/recent_index */ "./src/app/providers/recent_index.ts");
+/* harmony import */ var _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/menu-component/menu-component.component */ "./src/app/components/menu-component/menu-component.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _article_article_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./article/article.service */ "./src/app/article/article.service.ts");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
+/* harmony import */ var _services_admobfree_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/admobfree.service */ "./src/app/services/admobfree.service.ts");
+/* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/ngx/index.js");
+
+
 
 
 
@@ -2686,26 +1326,28 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_13__["MenuComponentComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _components_menu_component_menu_component_component__WEBPACK_IMPORTED_MODULE_12__["MenuComponentComponent"]],
             entryComponents: [],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__["BrowserAnimationsModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"].forRoot(),
-                _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_9__["IonicStorageModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [
-                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__["StatusBar"],
-                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"],
-                _article_article_service__WEBPACK_IMPORTED_MODULE_15__["ArticleService"],
-                _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_11__["FavoriteProvider"],
-                _providers_recent_index__WEBPACK_IMPORTED_MODULE_12__["RecentProvider"],
+                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
+                _article_article_service__WEBPACK_IMPORTED_MODULE_14__["ArticleService"],
+                _providers_bookmark_index__WEBPACK_IMPORTED_MODULE_10__["FavoriteProvider"],
+                _providers_recent_index__WEBPACK_IMPORTED_MODULE_11__["RecentProvider"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"] },
-                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_16__["SocialSharing"]
+                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_15__["SocialSharing"],
+                _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_16__["AdMobFree"],
+                _services_admobfree_service__WEBPACK_IMPORTED_MODULE_17__["AdmobFreeService"],
+                _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_18__["OneSignal"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -2740,7 +1382,7 @@ var ArticleService = /** @class */ (function () {
     function ArticleService(http) {
         this.http = http;
         // baseUrl = 'http://192.168.10.22/knowmyself/api/v1';
-        this.baseUrl = 'http://13.235.138.126/api/v1';
+        this.baseUrl = 'http://3.6.31.122/api/v1';
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json'
@@ -2808,7 +1450,7 @@ module.exports = "<div #expandWrapper class='expand-wrapper' [class.collapsed]=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".expand-wrapper {\n  -webkit-transition: max-height 0.4s ease-in-out;\n  transition: max-height 0.4s ease-in-out;\n  overflow: hidden;\n  height: auto;\n  width: 235%;\n  background: lightgray; }\n\n.collapsed {\n  max-height: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvbmcta25vd215c2VsZi9hcHAvc3JjL2FwcC9jb21wb25lbnRzL21lbnUtY29tcG9uZW50L21lbnUtY29tcG9uZW50LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksK0NBQXVDO0VBQXZDLHVDQUF1QztFQUN2QyxnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7RUFDWCxxQkFBcUIsRUFBQTs7QUFHckI7RUFDRSx3QkFBd0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWVudS1jb21wb25lbnQvbWVudS1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLXdyYXBwZXIge1xyXG4gICAgdHJhbnNpdGlvbjogbWF4LWhlaWdodCAwLjRzIGVhc2UtaW4tb3V0O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIHdpZHRoOiAyMzUlO1xyXG4gICAgYmFja2dyb3VuZDogbGlnaHRncmF5O1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICAuY29sbGFwc2VkIHtcclxuICAgICAgbWF4LWhlaWdodDogMCAhaW1wb3J0YW50O1xyXG4gICAgfSJdfQ== */"
+module.exports = ".expand-wrapper {\n  -webkit-transition: max-height 0.4s ease-in-out;\n  transition: max-height 0.4s ease-in-out;\n  overflow: hidden;\n  height: auto;\n  width: 235%;\n  background: lightgray; }\n\n.collapsed {\n  max-height: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Jpc2hpL0Rlc2t0b3Avbmcta25vd215c2VsZi9zcmMvYXBwL2NvbXBvbmVudHMvbWVudS1jb21wb25lbnQvbWVudS1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwrQ0FBdUM7RUFBdkMsdUNBQXVDO0VBQ3ZDLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osV0FBVztFQUNYLHFCQUFxQixFQUFBOztBQUdyQjtFQUNFLHdCQUF3QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9tZW51LWNvbXBvbmVudC9tZW51LWNvbXBvbmVudC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtd3JhcHBlciB7XHJcbiAgICB0cmFuc2l0aW9uOiBtYXgtaGVpZ2h0IDAuNHMgZWFzZS1pbi1vdXQ7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG4gICAgd2lkdGg6IDIzNSU7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaWdodGdyYXk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC5jb2xsYXBzZWQge1xyXG4gICAgICBtYXgtaGVpZ2h0OiAwICFpbXBvcnRhbnQ7XHJcbiAgICB9Il19 */"
 
 /***/ }),
 
@@ -2986,6 +1628,119 @@ var RecentProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/admobfree.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/services/admobfree.service.ts ***!
+  \***********************************************/
+/*! exports provided: AdmobFreeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdmobFreeService", function() { return AdmobFreeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
+
+
+
+var AdmobFreeService = /** @class */ (function () {
+    function AdmobFreeService(admobFree, platform) {
+        var _this = this;
+        this.admobFree = admobFree;
+        this.platform = platform;
+        //Interstitial Ad's Configurations
+        this.interstitialConfig = {
+            // add your config here
+            // for the sake of this example we will just use the test config
+            isTesting: false,
+            autoShow: false,
+            id: "ca-app-pub-5260397651977005/5779348324"
+        };
+        //Reward Video Ad's Configurations
+        this.RewardVideoConfig = {
+            isTesting: true,
+            autoShow: false,
+            id: "ca-app-pub-5260397651977005/5646254094"
+        };
+        platform.ready().then(function () {
+            // Load ad configuration
+            _this.admobFree.interstitial.config(_this.interstitialConfig);
+            //Prepare Ad to Show
+            _this.admobFree.interstitial.prepare()
+                .then(function () {
+                // alert(1);
+            }).catch(function (e) { return alert(e); });
+            // Load ad configuration
+            _this.admobFree.rewardVideo.config(_this.RewardVideoConfig);
+            //Prepare Ad to Show
+            _this.admobFree.rewardVideo.prepare()
+                .then(function () {
+                // alert(2);
+            }).catch(function (e) { return alert(e); });
+        });
+        //Handle interstitial's close event to Prepare Ad again
+        this.admobFree.on('admob.interstitial.events.CLOSE').subscribe(function () {
+            _this.admobFree.interstitial.prepare()
+                .then(function () {
+                //   console.log("Interstitial CLOSE");
+            }).catch(function (e) { return console.log(e); });
+        });
+        //Handle Reward's close event to Prepare Ad again
+        this.admobFree.on('admob.rewardvideo.events.CLOSE').subscribe(function () {
+            _this.admobFree.rewardVideo.prepare()
+                .then(function () {
+                //   alert("Reward Video CLOSE");
+            }).catch(function (e) { return alert(e); });
+        });
+    }
+    AdmobFreeService.prototype.BannerAd = function () {
+        var bannerConfig = {
+            isTesting: false,
+            autoShow: true,
+            id: "ca-app-pub-5260397651977005/6298223077"
+        };
+        this.admobFree.banner.config(bannerConfig);
+        this.admobFree.banner.prepare().then(function () {
+            // success
+        }).catch(function (e) { return alert(e); });
+    };
+    AdmobFreeService.prototype.InterstitialAd = function () {
+        var _this = this;
+        //Check if Ad is loaded
+        this.admobFree.interstitial.isReady().then(function () {
+            //Will show prepared Ad
+            _this.admobFree.interstitial.show().then(function () {
+            })
+                .catch(function (e) { return alert("show " + e); });
+        })
+            .catch(function (e) { return console.log("isReady " + e); });
+    };
+    AdmobFreeService.prototype.RewardVideoAd = function () {
+        var _this = this;
+        //Check if Ad is loaded
+        this.admobFree.rewardVideo.isReady().then(function () {
+            //Will show prepared Ad
+            _this.admobFree.rewardVideo.show().then(function () {
+            })
+                .catch(function (e) { return alert("show " + e); });
+        })
+            .catch(function (e) { return alert("isReady " + e); });
+    };
+    AdmobFreeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_2__["AdMobFree"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["Platform"]])
+    ], AdmobFreeService);
+    return AdmobFreeService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -3000,7 +1755,7 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: true
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -3047,7 +1802,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/ng-knowmyself/app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/rishi/Desktop/ng-knowmyself/src/main.ts */"./src/main.ts");
 
 
 /***/ })

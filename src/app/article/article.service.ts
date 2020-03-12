@@ -13,7 +13,7 @@ import { LatestArticle } from './latestarticle';
 export class ArticleService {
 
   // baseUrl = 'http://192.168.10.22/knowmyself/api/v1';
-  baseUrl = 'http://13.235.138.126/api/v1';
+  baseUrl = 'http://3.6.31.122/api/v1';
   // baseUrl = 'http://192.168.43.123/knowmyself/api/v1';
   constructor(private http: HttpClient) { }
 

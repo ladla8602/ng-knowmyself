@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { ToastController } from '@ionic/angular';//toast controller package
+import { ToastController } from '@ionic/angular';
 import { ArticleService } from '../article/article.service';
 
 @Component({
@@ -17,17 +17,23 @@ export class ListInfinteScrollPage implements OnInit, OnDestroy {
   public scrollLength: number = 5;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private articleService: ArticleService,
     public toast: ToastController
     ) { }
   
   ngOnInit() {
+    
+  }
+  ionViewWillEnter() {
     this.cat_id = this.route.snapshot.paramMap.get('cat_id');
     this.initializeIndex(this.cat_id);
   }
-
-  ngOnDestroy() {
+  ionViewWillLeave() {
     this.products = [];
+  }
+  ngOnDestroy() {
+    
   }
 
   initializeIndex(id){
