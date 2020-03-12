@@ -1,0 +1,50 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-5260397651977005~2316005561",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.ladla8602.knowmyself"
+    }
+  }
+}

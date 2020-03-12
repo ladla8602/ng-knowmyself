@@ -23,12 +23,14 @@
     "@angular/router": "^7.2.2",
     "@ionic-native/admob-free": "^5.22.0",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/onesignal": "^5.22.0",
     "@ionic-native/social-sharing": "^5.22.0",
     "@ionic-native/status-bar": "^5.9.0",
     "@ionic/angular": "^4.5.0",
     "@ionic/storage": "^2.2.0",
     "color": "^3.1.2",
     "cordova-admob-sdk": "^0.24.1",
+    "cordova-android": "^8.0.0",
     "cordova-plugin-admob-free": "^0.27.0",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
@@ -40,6 +42,7 @@
     "core-js": "^2.5.4",
     "emulator": "0.1.0",
     "handlebars": "^4.7.3",
+    "onesignal-cordova-plugin": "^2.8.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.29"
@@ -85,8 +88,11 @@
       },
       "cordova-plugin-admob-free": {
         "ADMOB_APP_ID": "ca-app-pub-5260397651977005~2316005561"
-      }
+      },
+      "onesignal-cordova-plugin": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   }
 }
