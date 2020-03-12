@@ -15,16 +15,16 @@ export class AdmobFreeService {
   interstitialConfig: AdMobFreeInterstitialConfig = {
     // add your config here
     // for the sake of this example we will just use the test config
-    isTesting: true,
+    isTesting: false,
     autoShow: false,
-    id: "ca-app-pub-3940256099942544/6300978111"
+    id: "ca-app-pub-5260397651977005/5779348324"
   };
  
   //Reward Video Ad's Configurations
   RewardVideoConfig: AdMobFreeRewardVideoConfig = {
     isTesting: true, // Remove in production
     autoShow: false,
-    id: "ca-app-pub-3940256099942544/1033173712"
+    id: "ca-app-pub-5260397651977005/5646254094"
   };
  
   constructor(
@@ -57,14 +57,14 @@ export class AdmobFreeService {
     this.admobFree.on('admob.interstitial.events.CLOSE').subscribe(() => {
       this.admobFree.interstitial.prepare()
         .then(() => {
-          alert("Interstitial CLOSE");
-        }).catch(e => alert(e));
+        //   console.log("Interstitial CLOSE");
+        }).catch(e => console.log(e));
     });
     //Handle Reward's close event to Prepare Ad again
     this.admobFree.on('admob.rewardvideo.events.CLOSE').subscribe(() => {
       this.admobFree.rewardVideo.prepare()
         .then(() => {
-          alert("Reward Video CLOSE");
+        //   alert("Reward Video CLOSE");
         }).catch(e => alert(e));
     });
   }
@@ -72,9 +72,9 @@ export class AdmobFreeService {
  
   BannerAd() {
     let bannerConfig: AdMobFreeBannerConfig = {
-      isTesting: true, // Remove in production
-      autoShow: true//,
-      //id: "ca-app-pub-39402XXXXXXX44/6300978111"
+      isTesting: false, // Remove in production
+      autoShow: true,
+      id: "ca-app-pub-5260397651977005/6298223077"
     };
     this.admobFree.banner.config(bannerConfig);
  
@@ -91,7 +91,7 @@ export class AdmobFreeService {
       })
         .catch(e => alert("show " + e));
     })
-      .catch(e => alert("isReady " + e));
+      .catch(e => console.log("isReady " + e));
   }
  
   RewardVideoAd() {

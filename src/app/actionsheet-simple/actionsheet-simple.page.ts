@@ -7,6 +7,7 @@ import { RecentProvider } from '../providers/recent_index';
 import { ToastController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { AdmobFreeService } from '../services/admobfree.service';
 
 @Component({
   selector: 'app-actionsheet-simple',
@@ -22,6 +23,7 @@ export class ActionsheetSimplePage implements OnInit {
   public isFavorite = false;
   public msg: any;
   public shareArticle: string;
+  public randomNumber: number;
 
   //action sheet package declaration
   constructor(
@@ -31,7 +33,8 @@ export class ActionsheetSimplePage implements OnInit {
     public favoriteProvider: FavoriteProvider,
     public recentProvider: RecentProvider,
     public toast: ToastController,
-    private socialSharing: SocialSharing
+    private socialSharing: SocialSharing,
+    private admobFreeService: AdmobFreeService,
     ) { }
 
   ngOnInit() {
@@ -41,7 +44,16 @@ export class ActionsheetSimplePage implements OnInit {
         this.isFavorite = isFav;
       });
   }
-
+  ionViewDidEnter() {
+    this.randomNumber = this.getRandomInt(3);
+    console.log(this.randomNumber);
+    if(this.randomNumber === 0){
+        this.admobFreeService.InterstitialAd();
+    }
+  }
+  getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
   initializeArticle(id){
     this.articleService.getArticle(id).subscribe(res => {
       if(res && res.length){

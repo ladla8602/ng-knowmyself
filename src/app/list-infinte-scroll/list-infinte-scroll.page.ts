@@ -23,12 +23,17 @@ export class ListInfinteScrollPage implements OnInit, OnDestroy {
     ) { }
   
   ngOnInit() {
+    
+  }
+  ionViewWillEnter() {
     this.cat_id = this.route.snapshot.paramMap.get('cat_id');
     this.initializeIndex(this.cat_id);
   }
-
-  ngOnDestroy() {
+  ionViewWillLeave() {
     this.products = [];
+  }
+  ngOnDestroy() {
+    
   }
 
   initializeIndex(id){

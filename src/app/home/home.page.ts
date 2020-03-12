@@ -138,7 +138,7 @@ export class HomePage implements OnInit{
     this.visiableBtnAutum = true;
     this.itemColor = "#F44336";
     this.elementRef.nativeElement.style.setProperty('--my-var', this.itemColor);
-    // this.adsInitialize();
+    this.adsInitialize();
 }
 
 ngOnInit(){

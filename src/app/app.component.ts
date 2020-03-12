@@ -217,7 +217,7 @@ export class AppComponent {
   }
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.hide();
+      this.statusBar.show();
     });
   }
   initializeLatestArticle(){
