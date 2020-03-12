@@ -20,7 +20,7 @@
   <!-- list with multiple iterations -->
   <ion-list *ngIf="products">
     <div *ngFor="let item of products">
-      <ion-item *ngIf="item.status == '1'; else noArticleBlock" routerLink="/article/{{item.id}}" routerDirection="forward" replaceUrl="true">
+      <ion-item *ngIf="item.status == '1'; else noArticleBlock" routerLink="/article/{{item.id}}" routerDirection="forward">
       <ion-label style="font-weight: 600;">
         {{item.index}}
       </ion-label>

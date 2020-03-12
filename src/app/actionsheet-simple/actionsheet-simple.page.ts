@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService } from '../article/article.service';
 import { FavoriteProvider } from '../providers/bookmark_index';
@@ -34,7 +34,7 @@ export class ActionsheetSimplePage implements OnInit {
     public recentProvider: RecentProvider,
     public toast: ToastController,
     private socialSharing: SocialSharing,
-    private admobFreeService: AdmobFreeService,
+    private admobFreeService: AdmobFreeService
     ) { }
 
   ngOnInit() {
